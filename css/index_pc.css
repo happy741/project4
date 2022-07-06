@@ -80,7 +80,27 @@ margin-left:-18%;}
 
 
 
-article{width:1200px; height:850px; background-color:rgb(31, 60, 61); margin:0 auto;}
+article{width:100%; height:1000px; margin-top:30%;
+ position:relative; display: flex; flex-direction: column; justify-content: center;
+align-items: center;}
+ .cloud{background-image: url(../img/cloud.png); background-size: cover;
+background-position: center; position:absolute; top:-30%; width:100%; height:180px;}
+article video{width:100%; height:80%;z-index: -3; position:absolute;}
+article::before{content:''; width:100%; height:100%; background-image: url(../img/pt_bg_mov.png);
+position:absolute; background-image: 2px 2px; opacity: .5; z-index: -2;}
+.article_box{width:70%; height:500px;display: flex;  background-color: rgb(255, 255, 255);}
+.article_text{width:53%; height:250px; margin-top:15%;}
+.article_text h1{font-size: 30px;}
+.article_text p{margin-top:4%; font-size: 20px;}
+
+.article_img{width:47%; height:350px;  position:relative;}
+.article_img img{position:absolute;}
+.article_img img:first-child{top:30%;}
+#im2{top:-60%; left:10%;}
+.article_img img:last-child{top:80%; left:40%;}
+
+
+
 
 .switch{width:1200px; height:800px; background-color:hotpink; margin:0 auto;
 display: flex; flex-wrap: wrap;}

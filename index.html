@@ -97,8 +97,24 @@
 
 
     <article>
-        TAKE IT EASY
+        <div class="cloud"></div>
+        <video muted autoplay loop> 
+             <source src="video/video.mp4" type="video/mp4">
+        </video>
 
+            <div class="article_box">
+                <div class="article_text">
+                    <h1>
+                        Let's adventure the dungeon and gather freind</h1>
+            
+                        <p>포켓몬을 모집할 때 이 믿음직한 팀원들은 머물 곳이 필요하므로 구조팀 캠프를 만들어 포켓몬 친구들을 수용하고 관리하고 강화하세요.<br> 구조대를 준비하면서 누가 그 직업에 적합한지, 각각의 미스터리한 던전에 접근하는 방법에 대해 곰곰이 생각해보세요.<br> 한 번에 한 칸씩 이동하거나 자동 모드를 사용하여 턴제 전투에서 다른 포켓몬과 교전할 때까지 이동 속도를 높입니다.</p>
+                </div>
+                <div class="article_img">
+                    <img src="img/pi.png" alt="#">
+                    <img src="img/hu.png" alt="#" id="im2">
+                    <img src="img/pan.png" alt="#">
+                </div>
+            </div>
     </article>
 
     <div class="switch">
@@ -227,7 +243,27 @@
     </footer>
 
     <script>
-        fo
+        $(function(){
+       $(".article_img img").mousemove(function(e){
+    gsap.to(".cursor", {duration: 0.2, left: e.pageX - 10, top: e.pageY - 10});
+
+    let x = e.clientX - ($(".article_img img").width()/2 + $(".article_img img").position().left);
+    let y = e.clientY - ($(".article_img img").height()/2 + $(".article_img img").position().top);
+
+    $(".img").attr({"style":"transform:translate("+x/20+"px, "+y/20+"px)"});
+});
+$(window).mousemove(function(e){
+$(".clientX").text(e.clientX);
+$(".clientY").text(e.clientY);
+});
+
+        $('.article_img img img').plaxify({"xRange":40,"yRange":40})
+        $('.article_img img').plaxify({"xRange":20,"yRange":20})
+        $('.article_img img').plaxify({"xRange":10,"yRange":10})
+        $('.article_img img').plaxify({"xRange":40,"yRange":40,"invert":true})
+        $.plax.enable()
+
+});
     </script>
 </body>
 </html>
