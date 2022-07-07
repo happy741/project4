@@ -7,6 +7,8 @@
 h1{font-family:  'ONE-Mobile-POP';}
 p{font-family: 'GangwonEdu_OTFBoldA';}
 ul,li,ol{list-style: none;}
+body{background-image: url(../img/bg\ \(1\).png);}
+
 header{width:100vw; height:100vh;  margin:0 auto;
 display: flex; justify-content: flex-end;
     position:relative;}
@@ -68,9 +70,9 @@ flex-wrap: nowrap;}
 #video_2{width:65%; height:650px;}
 #video_2 iframe{border:0; width:100%; height:100%;}
 
-.video1{top:-5%; font-size: 15rem; letter-spacing: 1rem;}
-.video2{bottom:35%; font-size: 10rem; letter-spacing: 1rem; line-height: 1.5;}
-.video3{bottom:0; font-size: 13rem;}
+.video1{width:100%; top:-5%; font-size:15em; letter-spacing: 1rem; margin-left:-8%;}
+.video2{font-size:7rem;margin-left:8%}
+.video3{bottom:0; font-size: 8rem;margin-left:-8%;}
 
 
 
@@ -78,8 +80,8 @@ flex-wrap: nowrap;}
 background-image: url(../img/bg.png); background-size: cover; background-position: center;
 display: flex;flex-direction: column; justify-content: flex-end;}
 #slide{width:100%; height:600px; position:relative;}
-#slide_box{width:7700px; height:100%;}
-#slide_box ul{margin-left:8%}
+#slide_box{width:497%; height:100%;}
+#slide_box ul{width:100%; margin-left:8%}
 #slide_box ul li{width:300px; height:400px; background-color: aliceblue;
 margin:1%;float: left; transform: skew(-15deg); overflow: hidden;}
 #slide_box ul li a img{transform: skew(15deg); width:140%; margin-top:-15%;
@@ -89,7 +91,7 @@ margin-left:-18%;}
 .story h1{font-size: 55px; text-align: center; color:gold;}     
 .story p{font-size: 20px; text-align: center; color:rgb(0, 0, 0);}
 #prev{width:100px; height:100px; background-color: aqua; position:absolute; 
-    top:40%;}
+    top:40%; z-index: 999;}
 #next{width:100px; height:100px; background-color: aqua;position:absolute;
 right:0; bottom:50%;}
 
