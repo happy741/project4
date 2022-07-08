@@ -65,24 +65,24 @@
         <div class="section_box2">
 
         <div id="skew">
-            <img src="img/aa.png" alt="">
+            <img src="img/aa.png" alt="#">
         </div>
-        <img src="img/main (1).png" alt="">
+        <img src="img/main (1).png" alt="#">
         </div>
 
     </section>
 
 
     <div class="video">
-        <div id="video_2">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gXzuMRBQSwo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video_text">
+            <div class="video_box video1" id="video11">POKEMONSTER</div>
+            <div class="video_box video2" id="video22">MYSTERY DUNGEON</div>
+            <div class="video_box video3" id="video33">RESCUE TEAM DX</div>
         </div>
-      
-      <div class="video_box video1" id="video11">POKEMON</div>
-      <div class="video_box video2" id="video22">MYSTERY DUNGEON</div>
-      <div class="video_box video3" id="video33">RESCUE TEAM DX</div>
-
-
+      <div id="video_2">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gXzuMRBQSwo" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  
     </div>
 
     <div class="story">
@@ -134,32 +134,29 @@
                     <p>포켓몬을 모집할 때 이 믿음직한 팀원들은 머물 곳이 필요하므로 구조팀 캠프를 만들어 포켓몬 친구들을 수용하고 관리하고 강화하세요.<br> 구조대를 준비하면서 누가 그 직업에 적합한지, 각각의
                         미스터리한 던전에 접근하는 방법에 대해 곰곰이 생각해보세요.<br> 한 번에 한 칸씩 이동하거나 자동 모드를 사용하여 턴제 전투에서 다른 포켓몬과 교전할 때까지 이동 속도를 높입니다.</p>
                 </div>
-                <div class="article_img">
-                    <img src="img/pi.png" alt="#">
-                    <img src="img/hu.png" alt="#" id="im2">
-                    <img src="img/pan.png" alt="#">
-                </div>
+                
             </div>
     </article>
 
     <div class="switch">
-        <h1>AVAILABLE NOW!</h1>
-        <div class="switch_img">
-      
-            <img src="img/b.png" alt="#">
-            <img src="img/c.png" alt="#">
-            <img src="img/d.png" alt="#">
+        <h1>PLAY NOW!</h1>
+            <div class="switch_bg">
+                <img src="img/switch.png" alt="#">
             </div>
             <div class="switch_text">
-                <ul>DETAIL
-                    <li></li>
-                </ul>
-                <ul>GIFT
-                    <li></li>
-                </ul>
-                <ul>PERIOD
-                    <li></li>
-                </ul>
+                <video muted autoplay loop> 
+                    <source src="video/video.mp4" type="video/mp4">
+               </video>
+       
+
+                <div class="article_img">
+                    <!-- <img src="img/pi.png" alt="#">
+                    <img src="img/hu.png" alt="#" id="im2">
+                    <img src="img/pan.png" alt="#"> -->
+                    <img src="img/swi3.png" alt="#">
+                </div>
+
+
             </div>
 
     </div>
@@ -269,7 +266,7 @@
 
     <script>
         $(function () {
-                $("article").mousemove(function (e) {
+                $(".switch").mousemove(function (e) {
 
 
                     let x = e.pageX - ($(".article_img").width() / 3 + $(".article_img").position().left);
@@ -283,12 +280,13 @@
                 $(window).scroll(function () {
                     var ws = $(this).scrollTop();
                     var section = $('section').offset().top;
-                    if (ws > section - 600) {
+                    if (ws > section - 550) {
                         $('.section_box2 img').css('transform', 'scaleX(1)');
                         $('#skew').css('transform', 'scaleX(1) skew(25deg)');
-                        $('.section_box h1').css('transform', 'translateX(0)');
+                        $('#skew img').css('transform', 'skew(-25deg)');
+                        $('.section_box h1').css('transform', 'scaleX(1)');
                         $('.section_box h2').css('transform', 'translateX(0)');
-
+                        $('.section_box p').css('opacity','1');
                     }
 
                     var icon1 = $('header').offset().top;
@@ -355,23 +353,7 @@
 
                 // ]);
 
-//                 $('#prev').click(function () {
 
-                   
-
-//                     $('#slide_box').css('margin-left', -407);
-
-//                     $('#slide_box').stop().animate({ marginLeft: 0 }, 800);
-
-//                 });
-
-
-
-//                 $('#next').click(function(){
-
-// $('#slide_box').stop().animate({marginLeft:-507},800);
-
-//  });
 
 var page = 0;
 
@@ -407,30 +389,11 @@ $('#next').click(function () {
                 });
                 
 
-// var line_height = document.getElementsByClassName('video_box').offsetTop;
-
-// if ((scrollX >= line_height - 600) && (scrollX <= line_height + 200)) {
-//     roadmap();
-// }
 
 
-// function roadmap() {
 
-//     var content_height = document.getElementsByClassName('video_box')[0].offsetWidth;
-//     var width = scrollX - (line_height - 600);
-//     var scrolled = (width / content_height) * 100;
-//     document.getElementsByClassName('video_box')[0].style.width = scrolled + "%";
-// }
 
-// const allh2 = document.getElementsByClassName('video_box');
 
-// window.addEventListener('scroll', ()=> {
-//   const scroll = window.scrollY;
-
-//   for (let video_box of allh2) {
-//     video_box.style.transform = `translate3d(${-scroll}px, 0, 0)`;
-//   }
-// });
 let text=document.getElementById('video11');
 let text2=document.getElementById('video22');
 let text3=document.getElementById('video33');
