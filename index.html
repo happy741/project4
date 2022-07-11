@@ -24,19 +24,21 @@
             </div>
         </div>
         <div id="header_box"></div>
+    
         <div id="header_box2">
-            <div class="center-outer">
-                <div class="center-inner">
-                
-                <div class="bubbles">
-             
-                </div>
-                
-                </div>
-                </div>
-            <div id="header_logo"></div>
+            <div class="bubble_box">
+                <div class="bubbles path1"></div>
+                <div class="bubbles path2"></div>
+                <div class="bubbles path3"></div>
+                <div class="bubbles path4"></div>
+                <div class="bubbles path5"></div>
+                <div class="bubbles path6"></div>
+                <div class="bubbles path7"></div>
+                <div class="bubbles path8"></div>
+                <div class="bubbles path9"></div>
+            </div>
+    
         </div>
-        
     
     
     </header>
@@ -86,32 +88,32 @@
     </div>
 
     <div class="story">
-
+    
         <h1>CHOOSE YOUR POKEMON</h1>
-    <P>당신과 알맞은 포켓몬을 질문을 통해 정해드립니다!</P>
+        <P>당신과 알맞은 포켓몬을 질문을 통해 정해드립니다!</P>
         <div id="slide">
             <div id="prev"></div>
             <div id="slide_box">
-              
-            <ul>
-                <li><a href=""><img src="img/p_pic_l_1.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_18.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_19.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_20.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_2.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_3.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_4.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_5.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_6.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_7.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_8.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_9.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_10.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_12.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_13.png" alt="#"></a></li>
-                <li><a href=""><img src="img/p_pic_l_14.png" alt="#"></a></li>
-               
-            </ul>
+    
+                <ul id="slide_ul">
+                    <li><a href=""><img src="img/p_pic_l_1.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_18.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_19.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_20.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_2.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_3.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_4.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_5.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_6.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_7.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_8.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_9.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_10.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_12.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_13.png" alt="#"></a></li>
+                    <li><a href=""><img src="img/p_pic_l_14.png" alt="#"></a></li>
+    
+                </ul>
             </div>
             <div id="next"></div>
         </div>
@@ -310,53 +312,40 @@
                     if (ws > stay + 100) {
                         $('.stay').css('transform', 'scaleY(1)');
                     }
+
+                    var header = $('header').offset().top;
+                    if (ws > header + 10) {
+                        $('.bubble_box').css('display', 'none');
+                    }
+
+
                 });
 
 
-                // $.jScrollability([
-                //     {
-                //         'selector': '.video .video_box:nth-child(1)',
-                //         'start': function($el) {return $(".video").offset().top - 500},
-                //         'end': function($el) {return ($(".video").offset().top + $(".video").outerHeight()) + 200},
-                //         'fn': {
-                //             'left': {
-                //                 'start': 18,
-                //                 'end': -2,
-                //                 'unit': '%'
-                //             }
-                //         }
-                //     },
-                //     {
-                //         'selector': '.video .video_box:nth-child(2)',
-                //         'start': function($el) {return $(".video").offset().top - 500},
-                //         'end': function($el) {return ($(".video").offset().top + $(".video").outerHeight()) + 200},
-                //         'fn': {
-                //             'left': {
-                //                 'start': -18,
-                //                 'end': 2,
-                //                 'unit': '%'
-                //             }
-                //         }
-                //     },
-                //     {
-                //         'selector': '.video .video_box:nth-child(3)',
-                //         'start': function($el) {return $(".video").offset().top - 500},
-                //         'end': function($el) {return ($(".video").offset().top + $(".video").outerHeight()) + 200},
-                //         'fn': {
-                //             'left': {
-                //                 'start': 18,
-                //                 'end': -2,
-                //                 'unit': '%'
-                //             }
-                //         }
-                //     }
 
-                // ]);
+
+                //header bubble
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementsByClassName("bubble_box")[0].style.top = "100%";
+  } else {
+    document.getElementsByClassName("bubble_box")[0].style.top = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+                //header bubble
 
 
 
+//slide//slide//slide//slide
 var page = 0;
-
+var slideUl=document.getElementById('slide_ul');
+var slideLi= slideUl.offsetWidth/16;
+var li_index=$('#slide_ul li').indexOf;
 $('#prev').click(function () {
 
     page--;
@@ -367,7 +356,7 @@ $('#prev').click(function () {
         return;
     }
 
-    $('#slide_box').stop().animate({ marginLeft: -445 * page }, 800);
+    $('#slide_box').stop().animate({ marginLeft: -500 * page }, 800);
 
 });
 
@@ -380,15 +369,18 @@ $('#next').click(function () {
        
         return;
     }
+    $('#slide_box').removeClass('clicked')
+    $('#slide_box').stop().animate({ marginLeft: -500 * page },function(){
+        $(this).addClass('clicked');
+    });
 
-    $('#slide_box').stop().animate({ marginLeft: -445 * page }, 800);
 });
 
 
        
                 });
                 
-
+//slide//slide//slide
 
 
 
