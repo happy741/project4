@@ -122,26 +122,27 @@
 
 
     <article>
-        <div class="cloud"></div>
-        <video muted autoplay loop> 
-             <source src="video/video.mp4" type="video/mp4">
-        </video>
+    <h1>신비한 메일</h1>
 
-            <div class="article_box">
-                <div class="article_text">
-                    <div class="text_h1">
-                        <h1>
-                            Let's adventure the dungeon and gather freind</h1>
-                    </div>
-                    <p>포켓몬을 모집할 때 이 믿음직한 팀원들은 머물 곳이 필요하므로 구조팀 캠프를 만들어 포켓몬 친구들을 수용하고 관리하고 강화하세요.<br> 구조대를 준비하면서 누가 그 직업에 적합한지, 각각의
-                        미스터리한 던전에 접근하는 방법에 대해 곰곰이 생각해보세요.<br> 한 번에 한 칸씩 이동하거나 자동 모드를 사용하여 턴제 전투에서 다른 포켓몬과 교전할 때까지 이동 속도를 높입니다.</p>
-                </div>
-                
-            </div>
+    <div class="article_box3">
+    <div class="article_bg"></div>
+    <div class="article_box">
+        <p>지금까지의 「포켓몬 이상한의 던전」시리즈와 같이, 패스워드를 입력하는 것으로 모험에 도움이 되는 도구들을 손에 넣을 수 있는 「신비한 메일」의 시스템도 있습니다.<br> 톱 메뉴에 있는 「이상한 메일」로부터, 여러가지 곳에서 공개되는 8문자의 패스워드를 입력하면, 모험에 도움이 되는 도그 등을 얻을 수 있습니다. <br>던전을 클리어 하는 것으로, 특별한 포켓몬이 동료가 되는 구조 의뢰를 받을 수 있는 패스워드도 있습니다.</p>
+    </div>
+
+    <div class="article_box2">
+        <img src="img/image1.png" alt="">
+        <img src="img/image2.png" alt="">
+    </div>
+    </div>
+    
+
+
     </article>
 
     <div class="switch">
         <h1>PLAY NOW!</h1>
+        
             <div class="switch_bg">
                 <img src="img/switch.png" alt="#">
             </div>
@@ -345,36 +346,39 @@ var currentScrollPos = window.pageYOffset;
 var page = 0;
 var slideUl=document.getElementById('slide_ul');
 var slideLi= slideUl.offsetWidth/16;
-var li_index=$('#slide_ul li').indexOf;
-$('#prev').click(function () {
+var li_index=document.querySelectorAll('li').indexOf
+var i=0;
+// $('#prev').click(function () {
 
-    page--;
+//     page--;
 
-    if (page < 0) {
-        page = 0;
+//     if (page < 0) {
+//         page = 0;
       
-        return;
-    }
+//         return;
+//     }
 
-    $('#slide_box').stop().animate({ marginLeft: -500 * page }, 800);
+//     $('#slide_box').stop().animate({ marginLeft: -500 * page }, 800);
 
-});
+// });
 
-$('#next').click(function () {
+// $('#next').click(function () {
 
-    page++;
+//     page++;
 
-    if (page > $('#slide_box ul li').length-1) {
-        page = $('#slide_box ul li').length-1;
+//     if (page > $('#slide_box ul li').length-1) {
+//         page = $('#slide_box ul li').length-1;
        
-        return;
-    }
-    $('#slide_box').removeClass('clicked')
-    $('#slide_box').stop().animate({ marginLeft: -500 * page },function(){
-        $(this).addClass('clicked');
-    });
+//         return;
+//     }
+//     $('#slide_box').removeClass('clicked')
+//     $('#slide_box').stop().animate({ marginLeft: -500 * page });
 
-});
+//     for(i=0; i<page; i++){
+//         li_index[i].addClass('clicked')
+//     }
+
+// });
 
 
        

@@ -26,16 +26,16 @@ position:absolute; z-index: 5; top:20%; left:5%; }
 }
 
 .bubbles{clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-background-color: rgb(211, 172, 0); position:absolute; z-index: 999;}
-.path1{width:20px; height:20px; left:30%; animation:bubbles 9s infinite; z-index: 999;}
-.path2{width:30px; height:30px; left:40%;animation:bubbles2 6s infinite; z-index: 999;}
-.path3{width:40px; height:40px; left:45%;animation:bubbles3 9s infinite; z-index: 999;}
-.path4{width:10px; height:10px; left:35%;animation:bubbles2 5s infinite; z-index: 999;}
-.path5{width:20px; height:20px; left:50%;animation:bubbles 15s infinite; z-index: 999;}
-.path6{width:30px; height:30px; left:55%;animation:bubbles3 5s infinite; z-index: 999;}
-.path7{width:30px; height:30px; left:65%;animation:bubbles2 15s infinite; z-index: 999;}
-.path8{width:40px; height:40px; left:60%;animation:bubbles 11s infinite; z-index: 999;}
-.path9{width:20px; height:20px; left:70%;animation:bubbles3 11s infinite; z-index: 999;}
+ position:absolute; z-index: 999;}
+.path1{width:20px; height:20px; left:30%; animation:bubbles 9s infinite; z-index: 999; background-color: #00ffff;}
+.path2{width:30px; height:30px; left:40%;animation:bubbles2 6s infinite; z-index: 999;background-color: #2e5ec3;}
+.path3{width:40px; height:40px; left:45%;animation:bubbles3 9s infinite; z-index: 999;background-color:#ddf2fd;}
+.path4{width:10px; height:10px; left:35%;animation:bubbles2 5s infinite; z-index: 999;background-color:gold;}
+.path5{width:20px; height:20px; left:50%;animation:bubbles 15s infinite; z-index: 999;background-color:#3f95e1;}
+.path6{width:30px; height:30px; left:55%;animation:bubbles3 5s infinite; z-index: 999;background-color:#00ffff;}
+.path7{width:30px; height:30px; left:65%;animation:bubbles2 15s infinite; z-index: 999;background-color:#2e5ec3;}
+.path8{width:40px; height:40px; left:60%;animation:bubbles 11s infinite; z-index: 999;background-color:#ddf2fd;}
+.path9{width:20px; height:20px; left:70%;animation:bubbles3 11s infinite; z-index: 999;background-color:gold;}
 
 
 
@@ -119,37 +119,29 @@ margin-left:-18%;}
 right:0; bottom:50%;}
 
 
-article{width:100%; height:1338px; margin-top:20%;
- position:relative; display: flex; flex-direction: column; justify-content: center;
-align-items: center; }
- .cloud{background-image: url(../img/cloud.png); background-size: cover;
-background-position: center; position:absolute; top:-10%; width:100%; height:180px;}
-article video{width:100%; height:80%;z-index: -3; position:absolute;}
-article::before{content:''; width:100%; height:100%; background-image: url(../img/pt_bg_mov.png);
-position:absolute; background-image: 2px 2px; opacity: .3; z-index: -2;}
-.article_box{width:75%; height:500px;display: flex; 
-     background:linear-gradient(rgb(255, 255, 255), rgba(255,255,255,0));
-    border-radius: 5%;border: 1px solid gold; justify-content: center;}
-.article_text{width:50%; height:250px; margin-top:5%; }
-.text_h1{margin-bottom: 20%;}
-.article_text h1{font-size: 30px; color:gold;}
-.article_text p{margin-top:4%; font-size: 20px; color:#fff;}
-
-
+article{width:95%; height:1000px; margin-top:20%;
+ position:relative;flex-wrap: wrap;}
+.article_box{width:30%; height:300px; 
+    border:10px solid gold; padding:2%;}
+.article_box2{width:40%; height:600px; margin-left:2%;}
+article h1{ font-size: 50px; margin-bottom: 5%; background-color: gold;
+display: inline-block; padding:1%; margin-left:5%;}
+.article_bg{position:absolute;width:40%; height:100%; background-image: url(../img/article.png);
+background-size:contain;background-repeat: no-repeat; left:0; top:52%;}
+.article_box p{letter-spacing: 2px; line-height: 25px;}
+.article_box3{display: flex; justify-content: center; align-items: center;}
 
 
 .switch{width:100%; height:1084px; margin:0 auto;
-display: flex;flex-direction: column; justify-content: center;align-items: center;}
+display: flex;flex-direction: column; justify-content: center;align-items: center;position:relative;}
 .switch_bg{width:100%; height:auto; position:absolute;}
 .switch_bg img{width:100%; height:auto;}
-.switch h1{width:100%;}
-.switch_text{width:65%; height:40vw; margin-bottom: 2%; position:relative;}
-.switch_text video{ width:100%; height:100%;}
-
-
+.switch h1{ position:absolute; font-size: 50px; top:10%; left:0%; background-color: gold;
+    padding:1%;}
+.switch_text{width:65%; height:40vw; margin-bottom: 2%; position:relative;  }
+.switch_text video{ width:100%; height:100%; margin-top:2%; }
 .article_img{width:37%; height:350px;  position:absolute; top:0; }
-.article_img img{position:absolute; top:-30%;left:120%;}
-.article_img img{width:50vw }
+.article_img img{position:absolute; top:10%;left:120%; width:50vw}
 
 
 
