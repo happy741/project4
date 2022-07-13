@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index_pc.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/index_tablet.css">
+
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <div id="wrap">
     <header>
         <div id="header_text">
             <div class="text">
@@ -92,30 +95,30 @@
         <h1>CHOOSE YOUR POKEMON</h1>
         <P>당신과 알맞은 포켓몬을 질문을 통해 정해드립니다!</P>
         <div id="slide">
-            <div id="prev"></div>
+            <div id="prev" onclick="prev();"></div>
             <div id="slide_box">
     
                 <ul id="slide_ul">
-                    <li><a href=""><img src="img/p_pic_l_1.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_18.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_19.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_20.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_2.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_3.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_4.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_5.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_6.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_7.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_8.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_9.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_10.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_12.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_13.png" alt="#"></a></li>
-                    <li><a href=""><img src="img/p_pic_l_14.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_1.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_18.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_19.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_20.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_2.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_3.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_4.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_5.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_6.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_7.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_8.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_9.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_10.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_12.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_13.png" alt="#"></a></li>
+                    <li class="slide_li"><a href=""><img src="img/p_pic_l_14.png" alt="#"></a></li>
     
                 </ul>
             </div>
-            <div id="next"></div>
+            <div id="next" onclick="next();"></div>
         </div>
     
     </div>
@@ -266,6 +269,7 @@
         </div>
 
     </footer>
+</div>
 
     <script>
         $(function () {
@@ -343,42 +347,45 @@ var currentScrollPos = window.pageYOffset;
 
 
 //slide//slide//slide//slide
-var page = 0;
+
+var slide=document.getElementById('slide_box');
 var slideUl=document.getElementById('slide_ul');
-var slideLi= slideUl.offsetWidth/16;
-var li_index=document.querySelectorAll('li').indexOf
-var i=0;
-// $('#prev').click(function () {
+var slideCount=document.querySelectorAll('slide_li');
+var slideWidth= slideUl.offsetWidth/16;
+var slideLen= slideCount.length;
+var page = 0;
 
-//     page--;
+$('#prev').click(function () {
 
-//     if (page < 0) {
-//         page = 0;
+    page--;
+
+    if (page < 0) {
+        page = 0;
       
-//         return;
-//     }
+        return;
+    }
 
-//     $('#slide_box').stop().animate({ marginLeft: -500 * page }, 800);
+    $('#slide_box').stop().animate({ marginLeft: slideWidth * page }, 800);
 
-// });
+});
 
-// $('#next').click(function () {
+$('#next').click(function () {
 
-//     page++;
+    page++;
 
-//     if (page > $('#slide_box ul li').length-1) {
-//         page = $('#slide_box ul li').length-1;
+    if (page > $('#slide_box ul li').length-1) {
+        page = $('#slide_box ul li').length-1;
        
-//         return;
-//     }
-//     $('#slide_box').removeClass('clicked')
-//     $('#slide_box').stop().animate({ marginLeft: -500 * page });
+        return;
+    }
+    $('#slide_box').removeClass('clicked')
+    $('#slide_box').stop().animate({ marginLeft: -slideWidth * page });
 
-//     for(i=0; i<page; i++){
-//         li_index[i].addClass('clicked')
-//     }
+    for(i=0; i<page; i++){
+        li_index[i].addClass('clicked')
+    }
 
-// });
+});
 
 
        
@@ -400,6 +407,28 @@ function myFunction(){
     text2.style.left=value*-0.1+'px';
     text3.style.left=value*0.1+'px';
 }
+
+
+
+// var slide=document.getElementById('slide_box');
+// var slideUl=document.getElementById('slide_ul');
+// var slideCount=document.querySelectorAll('slide_li');
+// var slideWidth= slideUl.offsetWidth/16;
+// var slideLen= slideCount.length;
+// var next=document.getElementById('#next');
+// var speed=500;
+
+// page=0;
+
+// next.addEventListener('click',function(){
+// // if(page<slideLen -1){
+// //     slide.style.transition=speed+'ms';
+// //     slide.style.transform='translate3d(-'+(slideWidth*(page+1))+'px, 0px 0px';
+// // }
+// slide.style.css='marginleft:-'+slideWidth+'0px 0px';
+
+
+// });
 
 
 

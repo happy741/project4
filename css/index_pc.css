@@ -3,7 +3,9 @@
 /* font-family: 'GangwonEdu_OTFBoldA'; */
 /* font-family: 'ONE-Mobile-POP'; */
 /* font-family: 'BMJUA'; */
+
 *{margin:0; padding:0;}
+#wrap{width:100%; overflow: hidden;}
 h1{font-family:  'ONE-Mobile-POP';}
 p{font-family: 'GangwonEdu_OTFBoldA';}
 ul,li,ol{list-style: none;}
@@ -47,14 +49,14 @@ position:absolute; z-index: 5; top:20%; left:5%; }
 animation:text 0.5s ease forwards; animation-delay: 1.8s;}
 
 
-section{width:1200px; height:889px;  margin:10% auto;
+section{width:95%; height:889px;  margin:10% auto;
 display: flex; }
 #section_bar{width:100px; height:20px; background-color:gold;
     margin-bottom:5%; }
 .section_box{width:45%; height:700px; 
 margin-top:15%; }
 
-#skew{width:500px; height:500px; background-color:gold;
+#skew{width:33vw; height:500px; background-color:gold;
 transform: skew(-25deg); position:absolute; bottom:0; left:20%;
 z-index: -1; overflow: hidden; transform-origin: right; transform: scaleX(0); transition:.3s ease;}
 
@@ -73,7 +75,7 @@ transition:1.5s ease;}
 
 .section_box2{width:55%; height:600px;
 margin-top:70px; position:relative; }
-.section_box2 img{width:110%;  transition:1s ease;transform-origin: right; transform: scaleX(0);}
+.section_box2 img{width:50vw;  transition:1s ease;transform-origin: right; transform: scaleX(0);}
 .hidden{overflow: hidden; }
 
 
@@ -83,7 +85,7 @@ margin-top:70px; position:relative; }
 .video{width:100%; height:100%;  margin:10% auto;
     color: rgba(0, 0, 0, 0); font-family: 'ONE-Mobile-POP'; 
     -webkit-text-stroke: 2px gold;  position:relative; display: flex;
-justify-content: center; align-items: center;}
+justify-content: center; align-items: center; overflow:hidden;}
 
 
 
@@ -100,9 +102,9 @@ justify-content: center; align-items: center;}
 .story{width:100%; height:800px; background-color:rgb(126, 114, 110); margin:5% auto;
 background-image: url(../img/bg.png); background-size: cover; background-position: center;
 display: flex;flex-direction: column; justify-content: flex-end;}
-#slide{width:100%; height:600px; position:relative;}
-#slide_box{width:600%; height:100%;}
-#slide_box ul{width:100%; margin-left:6%}
+#slide{width:100%; height:600px; position:relative; overflow:hidden;}
+#slide_box{width:100%; height:100%;}
+#slide_box ul{width:500%; margin-left:6%}
 #slide_box ul li{width:2.8%; height:auto; background-color: aliceblue;
 margin:1%;float: left; transform: skew(-15deg); overflow: hidden;}
 #slide_box ul li a img{transform: skew(15deg); width:140%; margin-top:-15%;
@@ -119,8 +121,8 @@ margin-left:-18%;}
 right:0; bottom:50%;}
 
 
-article{width:95%; height:1000px; margin-top:20%;
- position:relative;flex-wrap: wrap;}
+article{width:100%; height:1000px; margin-top:20%;
+ position:relative;flex-wrap: wrap; margin:0 auto;}
 .article_box{width:30%; height:300px; 
     border:10px solid gold; padding:2%;}
 .article_box2{width:40%; height:600px; margin-left:2%;}
@@ -132,7 +134,7 @@ background-size:contain;background-repeat: no-repeat; left:0; top:52%;}
 .article_box3{display: flex; justify-content: center; align-items: center;}
 
 
-.switch{width:100%; height:1084px; margin:0 auto;
+.switch{width:95%; height:1084px; margin:0 auto;
 display: flex;flex-direction: column; justify-content: center;align-items: center;position:relative;}
 .switch_bg{width:100%; height:auto; position:absolute;}
 .switch_bg img{width:100%; height:auto;}
@@ -161,8 +163,8 @@ table tr{border-top:1px solid black;}
 
 
 
-.join{width:1100px; height:800px; margin:10% auto;
-display: flex; justify-content: space-between;}
+.join{width:100%; height:800px; margin:10% auto;
+display: flex; justify-content: space-around;}
 
 .news{width:340px; height:600px;position:relative;}
 .news_img{width:340px; height:320px; clip-path: polygon(0 7%,53% 7%,59% 0,100% 0,100% 93%,47% 93%,41% 100%,0 100%);
@@ -188,7 +190,7 @@ align-items: center; padding-bottom: 15%; transition:.5s ease;}
 .news:hover::before{transform: translateX(8%);; background-color: gold;}
 .news:hover .news_text{background-color:#eee;}
 
-footer{width:1200px; height:900px; margin:0 auto;
+footer{width:95%; height:900px; margin:0 auto;
 display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
 .icon_box{width:100%; height:150px; 
 display: flex; justify-content: space-evenly; align-items: center;}
