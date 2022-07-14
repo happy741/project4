@@ -3,7 +3,7 @@
 /* font-family: 'GangwonEdu_OTFBoldA'; */
 /* font-family: 'ONE-Mobile-POP'; */
 /* font-family: 'BMJUA'; */
-
+@media screen and (min-width:1200px){
 *{margin:0; padding:0;}
 #wrap{width:100%; overflow: hidden;}
 h1{font-family:  'ONE-Mobile-POP';}
@@ -241,4 +241,5 @@ background-image: url(../img/footer.png);background-size: cover;}
         animation-timing-function: ease-in;
         background-color: gold;
     }
+}
 }
