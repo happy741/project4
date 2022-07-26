@@ -107,7 +107,7 @@ section{
     width:100%;
     height:950px;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
-    background-color: #769696;
+    background-color: rgb(189, 167, 44);
     mask-size: 100%;
    margin-top:-4%;
    position:relative;
@@ -165,13 +165,89 @@ section{
 
 article{
     width:100%;
-    height:700px;
+    height:900px;
     background-color: cadetblue;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
     margin-top:-5%;
     mask-size: 100%;
+    @include bg('../img/bg.png',cover,center);
+    @include flex(flex,center,center,row);
 }
 
+.slide_box{
+    width:1200px;
+    height:500px;
+    
+    margin-left:40%;
+
+}
+.sl{
+    width:7807px;
+    height:100%;
+    @include flex(flex,space-around,center,row);
+}
+
+.po{
+    width:350px;
+    height:431px;
+    background-color: blueviolet;
+    transform: skew(-7deg);
+}
+.buy{
+    width:100%;
+    height:1097px;
+    background-color: chocolate;
+    -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
+    margin-top:-5%;
+    mask-size: 100%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+}
+
+.buy_box{
+    width:1200px;
+    height:60%;
+    @include flex(flex,space-around,center,row);
+    margin-top:2%;
+}
+.buy_box2{
+    width:40%;
+    height:400px;
+    background-color: beige;
+    border-radius:20px;
+    position:relative;
+
+    &:first-of-type{
+        @include bg('../img/article1.png',cover,center);
+    }
+}
+
+.title{
+    width:400px;
+    height:70px;
+    position:absolute;
+ 
+    left:10%;
+    top:-10%;
+    @include bg('../img/title.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+.buy_box3{
+    width:1000px;
+    height:200px;
+    background-color: brown;
+    border-radius: 20px;
+}
+.chip{
+    width:100%;
+    height:800px;
+    background-color: darkgoldenrod;
+    -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
+    margin-top:-5%;
+    mask-size: 100%;
+}
 
 
 

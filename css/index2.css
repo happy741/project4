@@ -235,7 +235,7 @@ section video {
   width: 100%;
   height: 950px;
   -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
-  background-color: #769696;
+  background-color: rgb(189, 167, 44);
   -webkit-mask-size: 100%;
           mask-size: 100%;
   margin-top: -4%;
@@ -297,8 +297,102 @@ section video {
 
 article {
   width: 100%;
-  height: 700px;
+  height: 900px;
   background-color: cadetblue;
+  -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
+  margin-top: -5%;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.slide_box {
+  width: 1200px;
+  height: 500px;
+  margin-left: 40%;
+}
+
+.sl {
+  width: 7807px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.po {
+  width: 350px;
+  height: 431px;
+  background-color: blueviolet;
+  transform: skew(-7deg);
+}
+
+.buy {
+  width: 100%;
+  height: 1097px;
+  background-color: chocolate;
+  -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
+  margin-top: -5%;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buy_box {
+  width: 1200px;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+.buy_box2 {
+  width: 40%;
+  height: 400px;
+  background-color: beige;
+  border-radius: 20px;
+  position: relative;
+}
+.buy_box2:first-of-type {
+  background-image: url("../img/article1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  width: 400px;
+  height: 70px;
+  position: absolute;
+  left: 10%;
+  top: -10%;
+  background-image: url("../img/title.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.buy_box3 {
+  width: 1000px;
+  height: 200px;
+  background-color: brown;
+  border-radius: 20px;
+}
+
+.chip {
+  width: 100%;
+  height: 800px;
+  background-color: darkgoldenrod;
   -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
   margin-top: -5%;
   -webkit-mask-size: 100%;
