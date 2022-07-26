@@ -55,6 +55,12 @@ display: flex; }
     margin-bottom:5%; }
 .section_box{width:45%; height:700px; 
 margin-top:15%; }
+.section_box_box{
+    width:1300px;
+    height:100%;
+    display: flex;
+    margin:0 auto;
+}
 
 #skew{width:33vw; height:500px; background-color:gold;
 transform: skew(-25deg); position:absolute; bottom:0; left:20%;
@@ -75,7 +81,7 @@ transition:1.5s ease;}
 
 .section_box2{width:55%; height:600px;
 margin-top:70px; position:relative; }
-.section_box2 img{width:50vw;  transition:1s ease;transform-origin: right; transform: scaleX(0);}
+.section_box2 img{width:45vw;  transition:1s ease;transform-origin: right; transform: scaleX(0);}
 .hidden{overflow: hidden; }
 
 
