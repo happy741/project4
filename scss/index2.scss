@@ -107,7 +107,7 @@ section{
     width:100%;
     height:950px;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
-    background-color: rgb(189, 167, 44);
+    background-color: rgb(173, 166, 90);
     mask-size: 100%;
    margin-top:-4%;
    position:relative;
@@ -120,8 +120,46 @@ section{
     }
    }
 }
+.mail::after{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 5;
+    background-image: url(../img/fall.png);
+    animation:bg 40s linear infinite;
+}
+.mail::before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 5;
+    background-image: url(../img/fall2.png);
+    animation:bg 80s linear infinite;
+}
+.mail_img::before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index: 5;
+    background-image: url(../img/fall3.png);
+    animation:bg 50s linear infinite;
+}
+
+.mail_img::after{
+    content:'';
+    width:80%;
+    height:100%;
+    position:absolute;
+    z-index: 5;
+    background-image: url(../img/fall3.png);
+    animation:bg 20s linear infinite;
+}
+
 .mail_img{
-    width:1200px;
+    width:55vw;
     height:600px;
 
     @include bg('../img/mail.png',contain,center){
@@ -129,7 +167,7 @@ section{
     }
 }
 .mail_img2{
-    width:300px;
+    width:15vw;
     height:300px;
 
     bottom:10%;
@@ -141,11 +179,11 @@ section{
 }
 
 .mail_img3{
-    width:600px;
+    width:30vw;
     height:925px;
   
     position:absolute;
-    top:10;
+    top:0;
     right:0;
     @include bg('../img/mail1.png',contain,center){
         background-repeat: no-repeat;
@@ -206,14 +244,14 @@ article{
 }
 
 .buy_box{
-    width:1200px;
+    width:80%;
     height:60%;
     @include flex(flex,space-around,center,row);
     margin-top:2%;
 }
 .buy_box2{
     width:40%;
-    height:400px;
+    height:428px;
     background-color: beige;
     border-radius:20px;
     position:relative;
@@ -221,7 +259,41 @@ article{
     &:first-of-type{
         @include bg('../img/article1.png',cover,center);
     }
+    &:nth-of-type(2){
+        @include bg('../img/image1.png',cover,center);
+    }
 }
+.title2{
+    width:15vw;
+    height:341px;
+    
+    position:absolute;
+    left:-25%;
+    bottom:-25%;
+    @include bg('../img/bi.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+.title3{
+    width:12vw;
+    height:278px;
+    position:absolute;
+    right:-20%;
+    top:-20%;
+    @include bg('../img/nim.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+
+.title4{
+    width:100px;
+    height:100px;
+    background-color: rgb(37, 29, 44);
+    position:absolute;
+    right:-10%;
+    bottom:-10%;
+}
+
 
 .title{
     width:400px;
@@ -234,10 +306,56 @@ article{
         background-repeat: no-repeat;
     };
 }
+
+.title1_2,.title1_3{
+width:9vw;
+height:109px;
+
+position:absolute;
+}
+
+.title1_1,.title1_4{
+    width:13vw;
+    height:257px;
+    position:absolute;
+}
+
+.title1_1{
+    
+    top:-1%;
+    left:0%;
+    @include bg('../img/dal.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+
+.title1_2{
+    bottom:15%;
+    left:5%;
+    @include bg('../img/left.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+.title1_3{
+    bottom:15%;
+    right:5%;
+    @include bg('../img/right.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+.title1_4{
+    top:-1%;
+    right:0%;
+    @include bg('../img/lu.png',contain,center){
+        background-repeat: no-repeat;
+    };
+}
+
+
 .buy_box3{
     width:1000px;
     height:200px;
-    background-color: brown;
+    background-color: white;
     border-radius: 20px;
 }
 .chip{
@@ -247,7 +365,54 @@ article{
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
     margin-top:-5%;
     mask-size: 100%;
+    position:relative;
+    @include flex(flex,space-around,center,column);
 }
+
+
+.chip_box{
+    width:90%;
+    height:200px;
+    background-color: aqua;
+    @include flex(flex,center,center,row);
+}
+.chip1{
+    width:20%;
+    height:150px;
+    background-color: aliceblue;
+}
+.chip2{
+    width:40%;
+    height:150px;
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+.chip3{
+    width:10%;
+    height:100%;
+    background-color: #3f95e1;
+}
+.chip4{
+    width:40%;
+    height:100%;
+    background-color: blue;
+}
+
+.hom{
+    width:300px;
+    height:100px;
+    background-color: chartreuse;
+}
+.hom2{
+    width:500px;
+    height:400px;
+    background-color: crimson;
+}
+
 
 
 
@@ -298,5 +463,15 @@ article{
         opacity: 0;
         animation-timing-function: ease-in;
         background-color: gold;
+    }
+}
+
+@keyframes bg{
+    from{
+        transform: translate(30%,-30%);
+    }
+
+    to{
+        transform: translate(-50%,50%);
     }
 }
