@@ -12,10 +12,6 @@ h1 {
   font-family: "ONE-Mobile-POP";
 }
 
-p {
-  font-family: "GangwonEdu_OTFBoldA";
-}
-
 ul, li, ol {
   list-style: none;
 }
@@ -502,22 +498,24 @@ article {
   overflow: visible;
 }
 .click .po_box {
-  bottom: 0;
+  transform: scaleY(1);
 }
 
 .po_box {
   width: 100%;
   height: 60px;
+  bottom: 0;
   transition: 0.3s ease;
   background-color: #c33a4f;
-  bottom: -14%;
+  transform: scaleY(0);
   position: absolute;
+  transform-origin: bottom;
 }
 
 .buy {
   width: 100%;
   height: 1097px;
-  background-color: chocolate;
+  background-color: #c33a4f;
   -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
   margin-top: -5%;
   -webkit-mask-size: 100%;
@@ -525,6 +523,7 @@ article {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .buy_box {
@@ -535,6 +534,89 @@ article {
   align-items: center;
   flex-direction: row;
   margin-top: 2%;
+}
+
+.buy_box::after {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall3.png);
+  -webkit-animation: bg 120s linear infinite;
+          animation: bg 120s linear infinite;
+  background-attachment: fixed;
+}
+
+.buy_box::before {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall3.png);
+  -webkit-animation: bg2 200s linear infinite;
+          animation: bg2 200s linear infinite;
+  background-attachment: fixed;
+}
+
+.buy_box2::after {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall.png);
+  -webkit-animation: bg 50s linear infinite;
+          animation: bg 50s linear infinite;
+  background-attachment: fixed;
+}
+
+.buy_box2::before {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall.png);
+  -webkit-animation: bg2 70s linear infinite;
+          animation: bg2 70s linear infinite;
+  background-attachment: fixed;
+}
+
+.buy_box2::after {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall2.png);
+  -webkit-animation: bg 90s linear infinite;
+          animation: bg 90s linear infinite;
+  background-attachment: fixed;
+}
+
+.buy::before {
+  content: "";
+  width: 729px;
+  right: 0;
+  bottom: 0;
+  height: 405px;
+  z-index: -2;
+  position: absolute;
+  background-image: url(../img/bg_red.png);
+}
+
+.buy::after {
+  content: "";
+  width: 570px;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  height: 314px;
+  z-index: -1;
+  position: absolute;
+  background-image: url(../img/bg_red2.png);
 }
 
 .buy_box2 {
@@ -550,7 +632,7 @@ article {
   background-position: center;
 }
 .buy_box2:nth-of-type(2) {
-  background-image: url("../img/image1.png");
+  background-image: url("../img/title3.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -592,15 +674,24 @@ article {
 }
 
 .title {
-  width: 400px;
-  height: 70px;
+  width: 29vw;
+  height: 84px;
   position: absolute;
-  left: 10%;
+  z-index: 9;
+  left: 5%;
   top: -10%;
   background-image: url("../img/title.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "ONE-Mobile-POP";
+  font-size: 2vw;
+  color: white;
+  text-shadow: -1px 0 #49ac1b, 0 1px #49ac1b, 1px 0 #49ac1b, 0 -1px #49ac1b;
 }
 
 .title1_2, .title1_3 {
@@ -616,7 +707,7 @@ article {
 }
 
 .title1_1 {
-  top: -1%;
+  top: 8%;
   left: 0%;
   background-image: url("../img/dal.png");
   background-size: contain;
@@ -625,7 +716,7 @@ article {
 }
 
 .title1_2 {
-  bottom: 15%;
+  bottom: 10%;
   left: 5%;
   background-image: url("../img/left.png");
   background-size: contain;
@@ -634,7 +725,7 @@ article {
 }
 
 .title1_3 {
-  bottom: 15%;
+  bottom: 10%;
   right: 5%;
   background-image: url("../img/right.png");
   background-size: contain;
@@ -643,7 +734,7 @@ article {
 }
 
 .title1_4 {
-  top: -1%;
+  top: 8%;
   right: 0%;
   background-image: url("../img/lu.png");
   background-size: contain;
@@ -676,56 +767,160 @@ article {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  background-image: url("../img/aera.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .chip_box {
   width: 90%;
-  height: 200px;
-  background-color: aqua;
+  height: 300px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
+  border-radius: 20px;
+  box-shadow: 0 0 0.25vw rgba(0, 0, 0, 0.3) inset;
 }
 
 .chip1 {
-  width: 20%;
-  height: 150px;
-  background-color: aliceblue;
+  width: 10%;
+  height: 250px;
+  background-image: url("../img/pack.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .chip2 {
-  width: 40%;
+  width: 25%;
   height: 150px;
 }
 .chip2 h1 {
-  font-size: 20px;
+  font-size: 25px;
 }
 .chip2 p {
   font-size: 15px;
 }
 
 .chip3 {
-  width: 10%;
+  width: 11%;
   height: 100%;
-  background-color: #3f95e1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.chip3_1 {
+  width: 65px;
+  height: 65px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.chip3_1:first-of-type {
+  background-image: url("../img/icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.chip3_1:nth-of-type(2) {
+  background-image: url("../img/icon2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.chip3_1:hover {
+  transform: scale(1.1);
 }
 
 .chip4 {
-  width: 40%;
+  width: 30%;
   height: 100%;
-  background-color: blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.in {
+  width: 300px;
+  height: 120px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.in p {
+  cursor: pointer;
+}
+.in p:hover {
+  opacity: 0.7;
+}
+
+.in_button {
+  width: 250px;
+  height: 50px;
+  transition: 0.3s ease;
+  background-color: #c33a4f;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.in_button:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.in_button:first-of-type:hover {
+  transform: scale(1.1);
+}
+
+.in2 {
+  width: 300px;
+  height: 90px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 2%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.in2_img {
+  width: 70px;
+  height: 50px;
+  background-color: #3f95e1;
+}
+
+.in2_text {
+  width: 200px;
+  height: 40px;
+  background-color: #c33a4f;
 }
 
 .hom {
-  width: 300px;
+  width: 400px;
   height: 100px;
   background-color: chartreuse;
+  border-radius: 20px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "GangwonEdu_OTFBoldA";
 }
 
 .hom2 {
   width: 500px;
-  height: 400px;
+  height: 200px;
   background-color: crimson;
 }
 
