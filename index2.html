@@ -52,25 +52,24 @@
                 <source src="video/video2.mp4" type="video/mp4">
             </video>
             <div class="sec_box">
-                <h2>자유자재</h2>
-                <p> 로 돌아다니는 대모험</p>
+               <img src="img/text1.png" alt="#">
             </div>
 
             <div class="sec_box">
-                <h2>무대</h2>
-                <p>는 문명과 자연이 어우러진</p><br>
-                <p>미지의</p>
-                <h2>새로운 세계</h2>
+              <img src="img/text2.png" alt="#">
             </div>
 
-            <div class="sec_box">빨아드리</div>
+            <div class="sec_box"><img src="img/text3.png" alt="#"></div>
 
 
         </section>
 
         <div class="mail">
-            <h1>스토리는 그대로, 아름답고</h1>
-            <h1>화려해진 세계를 즐겨보자!</h1>
+ 
+                <h1>스토리는 그대로, 아름답고</h1>
+                <h1>화려해진 세계를 즐겨보자!</h1>
+                <div class="bar"></div>
+             
             <div class="mail_img"></div>
 
             <div class="mail_img2"></div>
@@ -79,6 +78,7 @@
 
         </div>
 
+
         <div class="slide">
 
         </div>
@@ -86,22 +86,72 @@
         <article>
             <div class="slide_box">
                 <div class="sl">
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
-                    <div class="po"></div>
+                    <div id="prev"></div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_1.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_18.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_19.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_20.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_2.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_3.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_4.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_5.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_6.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_7.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_8.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_9.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_10.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_12.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_13.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div class="po">
+                        <div class="po_img"><img src="img/p_pic_l_14.png" alt="#"></div>
+                        <div class="po_box"></div>
+                    </div>
+                    <div id="next"></div>
                 </div>
             </div>
         </article>
@@ -159,7 +209,42 @@
         </div>
 
     </div>
+<script>
+    $(function(){
+        var page1 =0;
+    var sd = $('.po').outerWidth(true);
+    var hidden=$('.po').index();
 
+    $('#prev').click(function () {
+        page1--;
+        
+
+        if (page1 < 0) {
+            page1 = 0;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+
+        $('.sl').stop().animate({ marginLeft: -sd * page1*1.4}, 500);
+
+    });
+
+    $('#next').click(function () {
+        page1++;
+
+        if (page1 > $('.po').length - 1) {
+            page1 = $('.po').length - 1;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+      
+        $('.sl').stop().animate({ marginLeft: -sd * page1*1.4}, 500);
+    });
+
+    });
+
+
+</script>
 
 </body>
 
