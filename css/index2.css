@@ -21,8 +21,9 @@ ul, li, ol {
   list-style: none;
 }
 
-body {
-  background-image: url(../img/bg\ \(1\).png);
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 header {
@@ -546,7 +547,7 @@ article {
   margin-top: -5%;
   -webkit-mask-size: 100%;
           mask-size: 100%;
-  background-image: url("../img/bg.png");
+  background-image: url("../img/back.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -588,8 +589,8 @@ article {
 }
 
 .po {
-  width: 350px;
-  height: 431px;
+  width: 17vw;
+  height: auto;
   background-color: gold;
   transform: skew(-7deg);
   display: flex;
@@ -602,8 +603,8 @@ article {
 }
 
 .po_img {
-  width: 300px;
-  height: 400px;
+  width: 15vw;
+  height: auto;
   margin-top: 8%;
   transform: skew(7deg);
 }
@@ -685,42 +686,6 @@ article {
   background-attachment: fixed;
 }
 
-.buy_box2::after {
-  content: "";
-  width: 500%;
-  height: 500%;
-  position: absolute;
-  z-index: -1;
-  background-image: url(../img/fall.png);
-  -webkit-animation: bg 50s linear infinite;
-          animation: bg 50s linear infinite;
-  background-attachment: fixed;
-}
-
-.buy_box2::before {
-  content: "";
-  width: 500%;
-  height: 500%;
-  position: absolute;
-  z-index: -1;
-  background-image: url(../img/fall.png);
-  -webkit-animation: bg2 70s linear infinite;
-          animation: bg2 70s linear infinite;
-  background-attachment: fixed;
-}
-
-.buy_box2::after {
-  content: "";
-  width: 500%;
-  height: 500%;
-  position: absolute;
-  z-index: -1;
-  background-image: url(../img/fall2.png);
-  -webkit-animation: bg 90s linear infinite;
-          animation: bg 90s linear infinite;
-  background-attachment: fixed;
-}
-
 .buy::before {
   content: "";
   width: 729px;
@@ -762,6 +727,45 @@ article {
   background-position: center;
 }
 
+.buy_box2_1 {
+  width: 100%;
+  height: 80px;
+  border-radius: 0 0 20px 20px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.buy2_2 {
+  width: 100%;
+  height: 50%;
+  background-color: #ef594f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.buy2_2 p {
+  font-size: 20px;
+  z-index: 999;
+  font-family: "GangwonEduPowerExtraBoldA";
+  margin-top: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.buy2_2 img {
+  width: 7%;
+  margin-top: 8%;
+  z-index: 999;
+}
+
+.buy2_3 {
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  border-radius: 20px;
+}
+
 .title2 {
   width: 15vw;
   height: 341px;
@@ -774,16 +778,53 @@ article {
   background-repeat: no-repeat;
 }
 
+.title2::after {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall.png);
+  -webkit-animation: bg 50s linear infinite;
+          animation: bg 50s linear infinite;
+  background-attachment: fixed;
+}
+
+.title2::before {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall.png);
+  -webkit-animation: bg2 70s linear infinite;
+          animation: bg2 70s linear infinite;
+  background-attachment: fixed;
+}
+
 .title3 {
   width: 12vw;
   height: 278px;
   position: absolute;
   right: -20%;
   top: -20%;
+  z-index: 999;
   background-image: url("../img/nim.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.title3::after {
+  content: "";
+  width: 500%;
+  height: 500%;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../img/fall2.png);
+  -webkit-animation: bg 90s linear infinite;
+          animation: bg 90s linear infinite;
+  background-attachment: fixed;
 }
 
 .title4 {
@@ -892,7 +933,7 @@ article {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-image: url("../img/aera.png");
+  background-image: url("../img/back.png");
   background-size: cover;
   background-position: center;
 }
@@ -998,10 +1039,24 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .in_button:hover {
   transform: scale(1.1);
+}
+.in_button .buy2_2 img {
+  margin-top: 8%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.in_button .buy2_2 p {
+  margin-top: 12%;
+}
+.in_button .buy2_3 {
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  border-radius: 0;
 }
 
 .in2 {
@@ -1120,6 +1175,7 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 @-webkit-keyframes op {

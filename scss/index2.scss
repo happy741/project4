@@ -23,7 +23,8 @@ $m: 0 auto;
 h1{font-family:  'ONE-Mobile-POP';}
 p{font-family: 'NEXON Lv1 Gothic OTF Light';}
 ul,li,ol{list-style: none;}
-body{background-image: url(../img/bg\ \(1\).png);}
+a{text-decoration: none; color:#000;}
+
 
 header{width:100vw; height:100vh;  margin:0 auto;
 display: flex; justify-content: flex-end;
@@ -290,6 +291,7 @@ section{
     }
 }
 
+
 .slide{
     width:100%;
     height:1156px;
@@ -298,6 +300,7 @@ section{
     margin-top:-5%;
     mask-size: 100%;
     @include flex(flex,start,center,column);
+   
     p{
         margin-top:5%;
         color:gold;
@@ -415,7 +418,7 @@ article{
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
     margin-top:-5%;
     mask-size: 100%;
-    @include bg('../img/bg.png',cover,center);
+    @include bg('../img/back.png',cover,center);
     @include flex(flex,center,center,row);
 }
 
@@ -448,8 +451,8 @@ article{
 }
 
 .po{
-    width:350px;
-    height:431px;
+    width:17vw;
+    height:auto;
     background-color: gold;
     transform: skew(-7deg);
     @include flex(flex,center,center,column);
@@ -458,8 +461,8 @@ article{
     transition: .3s ease;
 }
 .po_img{
-    width:300px;
-    height:400px;
+    width:15vw;
+    height:auto;
     margin-top:8%;
 
     transform: skew(7deg);
@@ -542,38 +545,6 @@ article{
 
 
 
-.buy_box2::after{
-    content:'';
-    width:500%;
-    height:500%;
-    position:absolute;
-    z-index: -1;
-    background-image: url(../img/fall.png);
-    animation:bg 50s linear infinite;
-    background-attachment: fixed;
-}
-
-.buy_box2::before{
-    content:'';
-    width:500%;
-    height:500%;
-    position:absolute;
-    z-index: -1;
-    background-image: url(../img/fall.png);
-    animation:bg2 70s linear infinite;
-    background-attachment: fixed;
-}
-
-.buy_box2::after{
-    content:'';
-    width:500%;
-    height:500%;
-    position:absolute;
-    z-index: -1;
-    background-image: url(../img/fall2.png);
-    animation:bg 90s linear infinite;
-    background-attachment: fixed;
-}
 
 
 
@@ -620,6 +591,45 @@ article{
         @include bg('../img/title3.jpg',cover,center);
     }
 }
+.buy_box2_1{
+
+    width:100%;
+    height:80px;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    position:absolute;
+    bottom:0;
+
+
+}
+.buy2_2{
+width:100%;
+height:50%;
+background-color: #ef594f;
+@include flex(flex,center,center,row);
+p{
+    font-size: 20px;
+    z-index: 999;
+    font-family: 'GangwonEduPowerExtraBoldA';
+    margin: {
+        top:10%;
+        left:2%;
+        right:2%;
+    }
+}
+img{
+    width:7%;
+    margin-top:8%;
+    z-index: 999;
+}
+}
+.buy2_3{
+    width:100%;
+    height:50%;
+    background-color: white;
+    border-radius:20px;
+}
+
 .title2{
     width:15vw;
     height:341px;
@@ -631,16 +641,53 @@ article{
         background-repeat: no-repeat;
     };
 }
+
+.title2::after{
+    content:'';
+    width:500%;
+    height:500%;
+    position:absolute;
+    z-index: -1;
+    background-image: url(../img/fall.png);
+    animation:bg 50s linear infinite;
+    background-attachment: fixed;
+}
+
+.title2::before{
+    content:'';
+    width:500%;
+    height:500%;
+    position:absolute;
+    z-index: -1;
+    background-image: url(../img/fall.png);
+    animation:bg2 70s linear infinite;
+    background-attachment: fixed;
+}
+
+
 .title3{
     width:12vw;
     height:278px;
     position:absolute;
     right:-20%;
     top:-20%;
+    z-index: 999;
     @include bg('../img/nim.png',contain,center){
         background-repeat: no-repeat;
     };
 }
+
+.title3::after{
+    content:'';
+    width:500%;
+    height:500%;
+    position:absolute;
+    z-index: -1;
+    background-image: url(../img/fall2.png);
+    animation:bg 90s linear infinite;
+    background-attachment: fixed;
+}
+
 
 .title4{
     width:14vw;
@@ -742,7 +789,7 @@ position:absolute;
     mask-size: 100%;
     position:relative;
     @include flex(flex,space-around,center,column);
-    @include bg('../img/aera.png',cover,center);
+    @include bg('../img/back.png',cover,center);
     
 }
 
@@ -825,23 +872,42 @@ border:1px solid white;
         }
     }
 }
-.in_button{
-    width:250px;
-    height:50px;
-    transition:.3s ease;
+.in_button {
+    width: 250px;
+    height: 50px;
+    transition: .3s ease;
     background-color: gold;
     border-radius: 10px;
     font-size: 20px;
     cursor: pointer;
-   
-    @include flex(flex,center,center,row);
 
-    &:hover{
+    @include flex(flex, center, center, column);
+
+    &:hover {
         transform: scale(1.1);
 
-    
-}
 
+    }
+    .buy2_2{
+       
+        img{
+            margin: {
+                top:8%;
+                left:2%;
+                right:2%;
+            }
+            
+        }
+        p{
+            margin-top:12%;
+        }
+    }
+    .buy2_3{
+        width:100%;
+        height:50%;
+        background-color: white;
+        border-radius: 0;
+    }
 
 }
 
@@ -901,6 +967,8 @@ border:1px solid white;
  background-color: gold;
  margin-top:-5%;
  border-radius: 20px;
+
+ 
 }
 
 
@@ -946,6 +1014,7 @@ border:3px solid white;
 top:50%;
 left:50%;
 transform: translate(-50%,-50%);
+cursor: pointer;
 }
 
 
