@@ -209,6 +209,7 @@ section video {
   flex-direction: row;
   position: absolute;
   font-size: 30px;
+  opacity: 0;
 }
 .sec_box:first-of-type {
   top: 9%;
@@ -253,6 +254,8 @@ section video {
 .mail h1 {
   font-size: 50px;
   color: white;
+  transition: 1s ease;
+  opacity: 0;
 }
 .mail h1:nth-of-type(1) {
   margin-top: 2%;
@@ -264,6 +267,8 @@ section video {
   background-color: white;
   position: absolute;
   top: 28%;
+  transition: 0.3s ease;
+  transform: scaleX(0);
 }
 
 .bar:before {
@@ -348,7 +353,7 @@ section video {
   width: 130%;
   height: 50%;
   position: absolute;
-  z-index: -2;
+  z-index: -999;
   background-image: url(../img/bg_red.png);
   bottom: -56px;
   right: -10px;
@@ -396,6 +401,8 @@ section video {
 .mail_img {
   width: 55vw;
   height: 600px;
+  transition: 1s ease;
+  opacity: 0;
   background-image: url("../img/mail.png");
   background-size: contain;
   background-position: center;
@@ -405,6 +412,8 @@ section video {
 .mail_img2 {
   width: 15vw;
   height: 300px;
+  transition: 1s ease;
+  opacity: 0;
   bottom: 10%;
   left: 10%;
   position: absolute;
@@ -418,6 +427,8 @@ section video {
   width: 30vw;
   height: 925px;
   position: absolute;
+  transition: 1s ease;
+  opacity: 0;
   top: 0;
   right: 0;
   background-image: url("../img/mail1.png");
@@ -438,14 +449,17 @@ section video {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  background-image: url("../img/bg.png");
+  background-size: cover;
+  background-position: center;
 }
 .slide p {
   margin-top: 5%;
-  color: gold;
+  color: rgb(190, 162, 0);
   font-size: 25px;
 }
 .slide h1 {
-  color: white;
+  color: #333;
   margin: 1% 0;
   font-size: 60px;
 }
@@ -453,7 +467,7 @@ section video {
 .sl_bar {
   width: 600px;
   height: 4px;
-  background-color: white;
+  background-color: #333;
   margin-bottom: 3%;
 }
 
@@ -490,6 +504,7 @@ section video {
   width: 668px;
   height: auto;
   right: -247px;
+  z-index: 5;
   top: 155px;
 }
 .item:nth-of-type(4) img {
@@ -667,7 +682,7 @@ article {
   width: 500%;
   height: 500%;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   background-image: url(../img/fall3.png);
   -webkit-animation: bg 120s linear infinite;
           animation: bg 120s linear infinite;
@@ -679,7 +694,7 @@ article {
   width: 500%;
   height: 500%;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   background-image: url(../img/fall3.png);
   -webkit-animation: bg2 200s linear infinite;
           animation: bg2 200s linear infinite;
@@ -715,6 +730,7 @@ article {
   background-color: beige;
   border-radius: 20px;
   position: relative;
+  z-index: 5;
 }
 .buy_box2:first-of-type {
   background-image: url("../img/article1.png");
@@ -783,7 +799,7 @@ article {
   width: 500%;
   height: 500%;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   background-image: url(../img/fall.png);
   -webkit-animation: bg 50s linear infinite;
           animation: bg 50s linear infinite;
@@ -795,7 +811,7 @@ article {
   width: 500%;
   height: 500%;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   background-image: url(../img/fall.png);
   -webkit-animation: bg2 70s linear infinite;
           animation: bg2 70s linear infinite;
@@ -820,7 +836,7 @@ article {
   width: 500%;
   height: 500%;
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   background-image: url(../img/fall2.png);
   -webkit-animation: bg 90s linear infinite;
           animation: bg 90s linear infinite;
@@ -911,13 +927,20 @@ article {
 .buy_box3 {
   width: 1000px;
   height: 200px;
+  z-index: 5;
   background-color: white;
   border-radius: 20px;
   background-image: url("../img/amii.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.3s ease;
+  cursor: pointer;
   box-shadow: 2px 2px 8px #444;
+}
+.buy_box3:hover {
+  box-shadow: 0 0 0;
+  transform: translateY(5px);
 }
 
 .chip {
@@ -1103,13 +1126,27 @@ article {
 .hom2 {
   width: 500px;
   height: 200px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.hom2:hover {
+  transform: scale(1.1);
 }
 
 .hom2_1 {
   width: 100%;
   height: 70px;
-  background-color: #c33a4f;
+  background-color: gold;
   border-radius: 20px;
+  position: relative;
+}
+
+.hom2_1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/fall2.png);
 }
 
 .hom2_2 {
@@ -1118,6 +1155,9 @@ article {
   -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
   -webkit-mask-size: 100%;
           mask-size: 100%;
+  background-image: url("../img/direct.png");
+  background-size: cover;
+  background-position: center;
   background-color: gold;
   margin-top: -5%;
   border-radius: 20px;
@@ -1133,10 +1173,14 @@ footer {
 .fo_logo {
   width: 25%;
   height: 100%;
+  transition: 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+.fo_logo:hover {
+  transform: scale(1.1);
 }
 .fo_logo img {
   width: 20vw;
@@ -1325,5 +1369,57 @@ footer {
   }
   to {
     transform: translate(-120%, 110%);
+  }
+}
+@-webkit-keyframes paint_mask {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 16% 100%, 0 100%);
+            clip-path: polygon(0 0, 40% 0, 16% 100%, 0 100%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 54% 100%, 0 100%);
+            clip-path: polygon(0 0, 40% 0, 54% 100%, 0 100%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0 0, 68% 0, 54% 100%, 0 100%);
+            clip-path: polygon(0 0, 68% 0, 54% 100%, 0 100%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0 0, 68% 0, 90% 100%, 0 100%);
+            clip-path: polygon(0 0, 68% 0, 90% 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@keyframes paint_mask {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  20% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 16% 100%, 0 100%);
+            clip-path: polygon(0 0, 40% 0, 16% 100%, 0 100%);
+  }
+  40% {
+    -webkit-clip-path: polygon(0 0, 40% 0, 54% 100%, 0 100%);
+            clip-path: polygon(0 0, 40% 0, 54% 100%, 0 100%);
+  }
+  60% {
+    -webkit-clip-path: polygon(0 0, 68% 0, 54% 100%, 0 100%);
+            clip-path: polygon(0 0, 68% 0, 54% 100%, 0 100%);
+  }
+  80% {
+    -webkit-clip-path: polygon(0 0, 68% 0, 90% 100%, 0 100%);
+            clip-path: polygon(0 0, 68% 0, 90% 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }

@@ -70,6 +70,7 @@ section{
     margin:$m;
     position:relative;
    z-index: -1;
+   
     video{
         width:100%;
         height:100%;
@@ -83,10 +84,11 @@ section{
     @include flex(flex, center,center,row);
     position:absolute;
     font-size: 30px;
-
+    opacity: 0;
     &:first-of-type{
         top:9%;
         left:10%;
+       
      @include bg('../img/video1.png',cover,center);
     }
 
@@ -121,10 +123,13 @@ section{
    h1{
     font-size: 50px;
     color:white;
+    transition:1s ease;
+    opacity: 0;
     &:nth-of-type(1){
         margin-top:2%;
         
     }
+    
   
    }
    
@@ -135,6 +140,8 @@ section{
     background-color: white;
     position:absolute;
     top:28%;
+    transition:.3s ease;
+    transform: scaleX(0);
     
 }
 
@@ -214,7 +221,7 @@ section{
     width:130%;
     height:50%;
     position:absolute;
-    z-index: -2;
+    z-index: -999;
     background-image: url(../img/bg_red.png);
  bottom:-56px;
  right:-10px;
@@ -263,7 +270,8 @@ section{
 .mail_img{
     width:55vw;
     height:600px;
-
+    transition:1s ease;
+    opacity: 0;
     @include bg('../img/mail.png',contain,center){
         background-repeat: no-repeat;
     }
@@ -271,7 +279,8 @@ section{
 .mail_img2{
     width:15vw;
     height:300px;
-
+    transition:1s ease;
+    opacity: 0;
     bottom:10%;
     left:10%;
     position:absolute;
@@ -284,6 +293,8 @@ section{
     width:30vw;
     height:925px;
     position:absolute;
+    transition:1s ease;
+    opacity: 0;
     top:0;
     right:0;
     @include bg('../img/mail1.png',contain,center){
@@ -300,14 +311,14 @@ section{
     margin-top:-5%;
     mask-size: 100%;
     @include flex(flex,start,center,column);
-   
+    @include bg('../img/bg.png',cover,center);
     p{
         margin-top:5%;
-        color:gold;
+        color:rgb(190, 162, 0);
         font-size: 25px;
     }
     h1{
-        color:white;
+        color:#333;
         margin:1% 0;
         font-size: 60px;
     }
@@ -316,7 +327,7 @@ section{
 .sl_bar{
     width:600px;
     height:4px;
-    background-color: white;
+    background-color: #333;
     margin-bottom:3%;
 }
 
@@ -354,6 +365,7 @@ section{
         width:668px;
         height:auto;
         right:-247px;
+        z-index: 5;
         top:155px;
         img{
             width:100%;
@@ -526,7 +538,7 @@ article{
     width:500%;
     height:500%;
     position:absolute;
-    z-index: -1;
+    z-index: -2;
     background-image: url(../img/fall3.png);
     animation:bg 120s linear infinite;
     background-attachment: fixed;
@@ -537,7 +549,7 @@ article{
     width:500%;
     height:500%;
     position:absolute;
-    z-index: -1;
+    z-index: -2;
     background-image: url(../img/fall3.png);
     animation:bg2 200s linear infinite;
     background-attachment: fixed;
@@ -583,7 +595,7 @@ article{
     background-color: beige;
     border-radius:20px;
     position:relative;
-
+    z-index: 5;
     &:first-of-type{
         @include bg('../img/article1.png',cover,center);
     }
@@ -647,7 +659,7 @@ img{
     width:500%;
     height:500%;
     position:absolute;
-    z-index: -1;
+    z-index: -2;
     background-image: url(../img/fall.png);
     animation:bg 50s linear infinite;
     background-attachment: fixed;
@@ -658,7 +670,7 @@ img{
     width:500%;
     height:500%;
     position:absolute;
-    z-index: -1;
+    z-index: -2;
     background-image: url(../img/fall.png);
     animation:bg2 70s linear infinite;
     background-attachment: fixed;
@@ -682,7 +694,7 @@ img{
     width:500%;
     height:500%;
     position:absolute;
-    z-index: -1;
+    z-index: -2;
     background-image: url(../img/fall2.png);
     animation:bg 90s linear infinite;
     background-attachment: fixed;
@@ -772,12 +784,20 @@ position:absolute;
 .buy_box3{
     width:1000px;
     height:200px;
+    z-index: 5;
     background-color: white;
     border-radius: 20px;
     @include bg('../img/amii.png',contain,center){
         background-repeat: no-repeat;
     };
+    transition:.3s ease;
+    cursor: pointer;
     box-shadow: 2px 2px 8px #444;
+    &:hover{
+        box-shadow: 0 0 0;
+        transform: translateY(5px);
+
+    }
 
 }
 .chip{
@@ -949,21 +969,34 @@ border:1px solid white;
 .hom2{
     width:500px;
     height:200px;
-  
+    transition:.3s ease;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
 
 
 }
 .hom2_1{
     width:100%;
     height:70px;
-    background-color: #c33a4f;
+    background-color: gold;
     border-radius: 20px;
+    position:relative;
+}
+.hom2_1::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+  background-image: url(../img/fall2.png);
 }
 .hom2_2{
     width:100%;
     height:150px;
  -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
  mask-size: 100%;
+@include bg('../img/direct.png',cover,center);
  background-color: gold;
  margin-top:-5%;
  border-radius: 20px;
@@ -982,6 +1015,10 @@ footer{
 .fo_logo{
     width:25%;
     height:100%;
+    transition:.3s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
 img{
     width:20vw;
 }
@@ -1086,4 +1123,29 @@ cursor: pointer;
     }
 }
 
-
+@keyframes paint_mask {
+    0% {
+     
+              clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    20% {
+    
+              clip-path: polygon(0 0, 40% 0, 16% 100%, 0 100%);
+    }
+    40% {
+    
+              clip-path: polygon(0 0, 40% 0, 54% 100%, 0 100%);
+    }
+    60% {
+     
+              clip-path: polygon(0 0, 68% 0, 54% 100%, 0 100%);
+    }
+    80% {
+     
+              clip-path: polygon(0 0, 68% 0, 90% 100%, 0 100%);
+    }
+    100% {
+    
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
