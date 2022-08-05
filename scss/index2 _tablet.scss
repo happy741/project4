@@ -1,8 +1,5 @@
 @charset "UTF-8";
 @import url(../css/font.css);
-@import url(../css/index2\ _tablet.css);
-@import url(../css/index2\ _mobile.css.css);
-@import url(../css/index2\ _mobile\ copy.css);
 $m: 0 auto;
 
 
@@ -20,43 +17,42 @@ $m: 0 auto;
     flex-direction: $row;
 }
 
-@media(min-width:1300px){
-*{margin:0; padding:0; scroll-behavior: smooth;}
-#wrap{width:100%; overflow: hidden;}
-h1{font-family:  'ONE-Mobile-POP';}
-p{font-family: 'NEXON Lv1 Gothic OTF Light';}
-ul,li,ol{list-style: none;}
-a{text-decoration: none; color:#000;}
-#wrap{ overflow: hidden; width:100%;}
-
-header{width:100vw; height:100vh;  margin:0 auto;
-display: flex; justify-content: flex-end;
-    position:relative;}
-
-#header_box{width:50%; height:100%; background-color: gold;
-transform: skew(-20deg); position:absolute;right:0;
-animation:op 1.5s forwards; }
-#header_box2{width:95%; height: 100%; background-image: url(../img/mv-pc.png);
-background-size: cover; background-position: 50%; background-attachment: fixed;}
-#header_text{display: flex; flex-direction: column; 
-position:absolute; z-index: 5; top:20%; left:5%; }
-#header_text h1{display: inline-block; font-size: 5vw; margin:5% 0; color:#333;}
-
-.bubble_box{width:70%; height:5%; position:absolute; bottom:-5%; left:15%;
-}
-
-.bubbles{clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
- position:absolute; z-index: 999;}
-.path1{width:20px; height:20px; left:30%; animation:bubbles 9s infinite; z-index: 999; background-color: #00ffff;}
-.path2{width:30px; height:30px; left:40%;animation:bubbles2 6s infinite; z-index: 999;background-color: #2e5ec3;}
-.path3{width:40px; height:40px; left:45%;animation:bubbles3 9s infinite; z-index: 999;background-color:#ddf2fd;}
-.path4{width:10px; height:10px; left:35%;animation:bubbles2 5s infinite; z-index: 999;background-color:gold;}
-.path5{width:20px; height:20px; left:50%;animation:bubbles 15s infinite; z-index: 999;background-color:#3f95e1;}
-.path6{width:30px; height:30px; left:55%;animation:bubbles3 5s infinite; z-index: 999;background-color:#00ffff;}
-.path7{width:30px; height:30px; left:65%;animation:bubbles2 15s infinite; z-index: 999;background-color:#2e5ec3;}
-.path8{width:40px; height:40px; left:60%;animation:bubbles 11s infinite; z-index: 999;background-color:#ddf2fd;}
-.path9{width:20px; height:20px; left:70%;animation:bubbles3 11s infinite; z-index: 999;background-color:gold;}
-
+@media(min-width:768px) and (max-width:1300px){
+    *{margin:0; padding:0;}
+    #wrap{width:100%; overflow: hidden;}
+    h1{font-family:  'ONE-Mobile-POP';}
+    p{ font-family: 'NEXON Lv1 Gothic OTF Light';;}
+    ul,li,ol{list-style: none;}
+    body{background-image: url(../img/bg\ \(1\).png);}
+    
+    header{width:100vw; height:100vh;  margin:0 auto;
+    display: flex; justify-content: flex-end;
+        position:relative;}
+    
+    #header_box{width:50%; height:100%; background-color: gold;
+    transform: skew(-20deg); position:absolute;right:0;
+    animation:op 1.5s forwards; }
+    #header_box2{width:100%; height: 100%; background-image: url(../img/mv-pc.png);
+    background-size: cover; background-position: 50%; background-attachment: fixed;}
+    #header_text{display: flex; flex-direction: column; 
+    position:absolute; z-index: 5; top:20%; left:5%; }
+    #header_text h1{display: inline-block; font-size: 6vw; margin:5% 0; color:#333;}
+    
+    .bubble_box{width:70%; height:5%; position:absolute; bottom:-5%; left:15%;
+    }
+    
+    .bubbles{clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+     position:absolute; z-index: 999;}
+    .path1{width:20px; height:20px; left:30%; animation:bubbles 9s infinite; z-index: 999; background-color: #00ffff;}
+    .path2{width:30px; height:30px; left:40%;animation:bubbles2 6s infinite; z-index: 999;background-color: #2e5ec3;}
+    .path3{width:40px; height:40px; left:45%;animation:bubbles3 9s infinite; z-index: 999;background-color:#ddf2fd;}
+    .path4{width:10px; height:10px; left:35%;animation:bubbles2 5s infinite; z-index: 999;background-color:gold;}
+    .path5{width:20px; height:20px; left:50%;animation:bubbles 15s infinite; z-index: 999;background-color:#3f95e1;}
+    .path6{width:30px; height:30px; left:55%;animation:bubbles3 5s infinite; z-index: 999;background-color:#00ffff;}
+    .path7{width:30px; height:30px; left:65%;animation:bubbles2 15s infinite; z-index: 999;background-color:#2e5ec3;}
+    .path8{width:40px; height:40px; left:60%;animation:bubbles 11s infinite; z-index: 999;background-color:#ddf2fd;}
+    .path9{width:20px; height:20px; left:70%;animation:bubbles3 11s infinite; z-index: 999;background-color:gold;}
+    
 
 
 
@@ -82,22 +78,27 @@ section{
 }
 
 .sec_box{
-    width:666px;
-    height:126px;
+    width:40vw;
+    height:7.5vw;
     @include flex(flex, center,center,row);
     position:absolute;
     font-size: 30px;
     opacity: 0;
+
+    img{
+        width:90%;
+        height:90%;
+    }
     &:first-of-type{
         top:9%;
         left:10%;
        
-     @include bg('../img/video1.png',cover,center);
+     @include bg('../img/video1.png',contain,center);
     }
 
     &:nth-of-type(2){
-        top:29%;
-        right:5vw;
+        top:45%;
+        right:-5%;
      @include bg('../img/video2.png',contain,center){
         background-repeat: no-repeat;
      }
@@ -107,7 +108,7 @@ section{
     }
 
     &:nth-of-type(3){
-        top:49%;
+        top:70%;
         left:5%;
      @include bg('../img/video1.png',cover,center);
     }
@@ -271,7 +272,7 @@ section{
 
 
 .mail_img{
-    width:55vw;
+    width:84vw;
     height:600px;
     transition:1s ease;
     opacity: 0;
@@ -298,7 +299,7 @@ section{
     position:absolute;
     transition:1s ease;
     opacity: 0;
-    top:0;
+    top:-120px;
     right:0;
     @include bg('../img/mail1.png',contain,center){
         background-repeat: no-repeat;
@@ -361,43 +362,45 @@ section{
     transition:0.3s ease;
 
     &:first-of-type{
+        width:5vw;
         top:0;
         left:0;
     }
     &:nth-of-type(2){
-        top:30px;
-        right:-103px;
+        width:3vw;
+        top:10vw;
+        right:5vw;
     }
     &:nth-of-type(3){
         bottom:40%;
-        left:-19%;
+        left:-1vw;
     }
     &:nth-of-type(4){
-        width:668px;
+        width:50vw;
         height:auto;
-        right:-247px;
+        right:-10vw;
         z-index: 5;
-        top:155px;
+        top:20vw;
         img{
             width:100%;
             height:100%;
         }
     }
     &:nth-of-type(5){
-        width:283px;
+        width:20vw;
         height:auto;
-        right:-83px;
-        top:-137px;
+        right:20px;
+        top:-10vw;
         img{
             width:100%;
             height:100%;
         }
     }
     &:nth-of-type(6){
-        width:284px;
+        width:20vw;
         height:auto;
-        left:-10%;
-       bottom:-35%;
+        left:-5vw;
+       bottom:-13vw;
         img{
             width:100%;
             height:100%;
@@ -405,10 +408,10 @@ section{
 
     }
     &:nth-of-type(7){
-        width:284px;
+        width:25vw;
         height:auto;
-        left:23%;
-       bottom:-57%;
+        left:17vw;
+       bottom:-20vw;
        transform: rotate(55deg);
         img{
             width:100%;
@@ -417,10 +420,10 @@ section{
         
     }
     &:nth-of-type(8){
-        width:284px;
+        width:20vw;
         height:auto;
-        left:-52px;
-       top:-118px;
+        left:42px;
+       top:-80px;
        transform: rotate(91deg);
         img{
             width:100%;
@@ -449,7 +452,7 @@ article{
     width:1200px;
     height:500px;
     
-    margin-left:40%;
+    margin-left:80%;
 
 }
 .sl{
@@ -565,7 +568,7 @@ article{
 }
 
 .buy_box{
-    width:80%;
+    width:96%;
     height:60%;
     @include flex(flex,space-around,center,row);
     margin-top:2%;
@@ -831,7 +834,7 @@ position:absolute;
 
 
 .buy_box3{
-    width:1000px;
+    width:90%;
     height:200px;
     z-index: 5;
     background-color: white;
@@ -866,7 +869,7 @@ position:absolute;
 
 
 .chip_box{
-    width:76%;
+    width:95%;
     height:300px;
     background-color: rgba(255,255,255,0.15);
     @include flex(flex,space-around,center,row);
@@ -893,7 +896,7 @@ position:absolute;
     }
 }
 .chip3{
-    width:11%;
+    width:15%;
     height:100%;
 
     display: flex;
@@ -929,7 +932,7 @@ position:absolute;
     @include flex(flex,space-evenly,center,column);
 }
 .in{
-    width:370px;
+    width:100%;
     height:120px;
 border:1px solid white;
     border-radius: 10px;
@@ -944,7 +947,7 @@ border:1px solid white;
     }
 }
 .in_button {
-    width: 250px;
+    width:90%;
     height: 50px;
     transition: .3s ease;
     background-color: gold;
@@ -983,7 +986,7 @@ border:1px solid white;
 }
 
 .in2{
-    width:370px;
+    width:100%;
     height:90px;
     background-color: white;
     border-radius: 10px;
@@ -993,14 +996,14 @@ border:1px solid white;
   
 }
 .in2_img{
-    width:106px;
+    width:50%;
     height:50px;
 
  
 }
 .in2_text{
-    width:200px;
-    height:40px;
+    width:50%;
+    height:60px;
     font-size: 12px;
     color:#333;
 }
@@ -1010,18 +1013,11 @@ border:1px solid white;
     background-color:white;
     border-radius: 20px;
     font-size: 30px;
-    transition:.3s ease;
-    cursor: pointer;
-    box-shadow: 4px 4px 4px #666;
     @include flex(flex,center,center,row);
     font-family: 'GangwonEdu_OTFBoldA';
     img{
         width:23%;
         height:77%;
-    }
-    &:hover{
-        box-shadow: 0 0 0;
-        transform: translateY(4px);
     }
 }
 .hom2{
@@ -1066,7 +1062,7 @@ border:1px solid white;
 
 
 footer{
-    width:75%;
+    width:90%;
     height:200px;
     margin:$m;
 
@@ -1085,22 +1081,22 @@ img{
     @include flex(flex,center,center,row);
 }
 .fo_nav{
-    width:80%;
+    width:100%;
     height:100%;
 
     @include flex(flex,space-around,center,row);
 
 }
 .menu12{
-    width:9vw;
-    height:80px;
+    width:13vw;
+    height:60px;
     background-color: white;
     border-radius: 10px;
     position:relative;
     transition:.3s ease;
     @include flex(flex,center,center,row);
     font-family:  'ONE-Mobile-POP';
-    font-size: 20px;
+    font-size: 15px;
 
     &:hover .btn_inner::before{
         background-image: url(../img/btn4.gif);
@@ -1125,8 +1121,8 @@ img{
 .menu12::after{
 position:absolute;
 content:'';
-width:8vw;
-height:60px;
+width:11vw;
+height:40px;
 border-radius: 10px;
 border:3px solid #c33a4f;
 top:50%;
@@ -1280,5 +1276,4 @@ img:nth-of-type(3){
               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
   }
-
 }

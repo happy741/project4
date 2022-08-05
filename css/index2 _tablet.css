@@ -1,12 +1,8 @@
 @import url(../css/font.css);
-@import url(../css/index2\ _tablet.css);
-@import url(../css/index2\ _mobile.css.css);
-@import url(../css/index2\ _mobile\ copy.css);
-@media (min-width: 1300px) {
+@media (min-width: 768px) and (max-width: 1300px) {
   * {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
   }
   #wrap {
     width: 100%;
@@ -21,13 +17,8 @@
   ul, li, ol {
     list-style: none;
   }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-  #wrap {
-    overflow: hidden;
-    width: 100%;
+  body {
+    background-image: url(../img/bg\ \(1\).png);
   }
   header {
     width: 100vw;
@@ -48,7 +39,7 @@
             animation: op 1.5s forwards;
   }
   #header_box2 {
-    width: 95%;
+    width: 100%;
     height: 100%;
     background-image: url(../img/mv-pc.png);
     background-size: cover;
@@ -65,7 +56,7 @@
   }
   #header_text h1 {
     display: inline-block;
-    font-size: 5vw;
+    font-size: 6vw;
     margin: 5% 0;
     color: #333;
   }
@@ -185,8 +176,8 @@
     height: 100%;
   }
   .sec_box {
-    width: 666px;
-    height: 126px;
+    width: 40vw;
+    height: 7.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,16 +186,20 @@
     font-size: 30px;
     opacity: 0;
   }
+  .sec_box img {
+    width: 90%;
+    height: 90%;
+  }
   .sec_box:first-of-type {
     top: 9%;
     left: 10%;
     background-image: url("../img/video1.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
   }
   .sec_box:nth-of-type(2) {
-    top: 29%;
-    right: 5vw;
+    top: 45%;
+    right: -5%;
     background-image: url("../img/video2.png");
     background-size: contain;
     background-position: center;
@@ -214,7 +209,7 @@
     margin-top: -5%;
   }
   .sec_box:nth-of-type(3) {
-    top: 49%;
+    top: 70%;
     left: 5%;
     background-image: url("../img/video1.png");
     background-size: cover;
@@ -370,7 +365,7 @@
     background-attachment: fixed;
   }
   .mail_img {
-    width: 55vw;
+    width: 84vw;
     height: 600px;
     transition: 1s ease;
     opacity: 0;
@@ -398,7 +393,7 @@
     position: absolute;
     transition: 1s ease;
     opacity: 0;
-    top: 0;
+    top: -120px;
     right: 0;
     background-image: url("../img/mail1.png");
     background-size: contain;
@@ -462,53 +457,55 @@
     transition: 0.3s ease;
   }
   .item:first-of-type {
+    width: 5vw;
     top: 0;
     left: 0;
   }
   .item:nth-of-type(2) {
-    top: 30px;
-    right: -103px;
+    width: 3vw;
+    top: 10vw;
+    right: 5vw;
   }
   .item:nth-of-type(3) {
     bottom: 40%;
-    left: -19%;
+    left: -1vw;
   }
   .item:nth-of-type(4) {
-    width: 668px;
+    width: 50vw;
     height: auto;
-    right: -247px;
+    right: -10vw;
     z-index: 5;
-    top: 155px;
+    top: 20vw;
   }
   .item:nth-of-type(4) img {
     width: 100%;
     height: 100%;
   }
   .item:nth-of-type(5) {
-    width: 283px;
+    width: 20vw;
     height: auto;
-    right: -83px;
-    top: -137px;
+    right: 20px;
+    top: -10vw;
   }
   .item:nth-of-type(5) img {
     width: 100%;
     height: 100%;
   }
   .item:nth-of-type(6) {
-    width: 284px;
+    width: 20vw;
     height: auto;
-    left: -10%;
-    bottom: -35%;
+    left: -5vw;
+    bottom: -13vw;
   }
   .item:nth-of-type(6) img {
     width: 100%;
     height: 100%;
   }
   .item:nth-of-type(7) {
-    width: 284px;
+    width: 25vw;
     height: auto;
-    left: 23%;
-    bottom: -57%;
+    left: 17vw;
+    bottom: -20vw;
     transform: rotate(55deg);
   }
   .item:nth-of-type(7) img {
@@ -516,10 +513,10 @@
     height: 100%;
   }
   .item:nth-of-type(8) {
-    width: 284px;
+    width: 20vw;
     height: auto;
-    left: -52px;
-    top: -118px;
+    left: 42px;
+    top: -80px;
     transform: rotate(91deg);
   }
   .item:nth-of-type(8) img {
@@ -545,7 +542,7 @@
   .slide_box {
     width: 1200px;
     height: 500px;
-    margin-left: 40%;
+    margin-left: 80%;
   }
   .sl {
     width: 7807px;
@@ -655,7 +652,7 @@
     position: relative;
   }
   .buy_box {
-    width: 80%;
+    width: 96%;
     height: 60%;
     display: flex;
     justify-content: space-around;
@@ -900,7 +897,7 @@
     background-repeat: no-repeat;
   }
   .buy_box3 {
-    width: 1000px;
+    width: 90%;
     height: 200px;
     z-index: 5;
     background-color: white;
@@ -936,7 +933,7 @@
     background-position: center;
   }
   .chip_box {
-    width: 76%;
+    width: 95%;
     height: 300px;
     background-color: rgba(255, 255, 255, 0.15);
     display: flex;
@@ -965,7 +962,7 @@
     font-size: 15px;
   }
   .chip3 {
-    width: 11%;
+    width: 15%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -1002,7 +999,7 @@
     flex-direction: column;
   }
   .in {
-    width: 370px;
+    width: 100%;
     height: 120px;
     border: 1px solid white;
     border-radius: 10px;
@@ -1019,7 +1016,7 @@
     opacity: 0.7;
   }
   .in_button {
-    width: 250px;
+    width: 90%;
     height: 50px;
     transition: 0.3s ease;
     background-color: gold;
@@ -1049,7 +1046,7 @@
     border-radius: 0;
   }
   .in2 {
-    width: 370px;
+    width: 100%;
     height: 90px;
     background-color: white;
     border-radius: 10px;
@@ -1060,12 +1057,12 @@
     flex-direction: row;
   }
   .in2_img {
-    width: 106px;
+    width: 50%;
     height: 50px;
   }
   .in2_text {
-    width: 200px;
-    height: 40px;
+    width: 50%;
+    height: 60px;
     font-size: 12px;
     color: #333;
   }
@@ -1075,9 +1072,6 @@
     background-color: white;
     border-radius: 20px;
     font-size: 30px;
-    transition: 0.3s ease;
-    cursor: pointer;
-    box-shadow: 4px 4px 4px #666;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1087,10 +1081,6 @@
   .hom img {
     width: 23%;
     height: 77%;
-  }
-  .hom:hover {
-    box-shadow: 0 0 0;
-    transform: translateY(4px);
   }
   .hom2 {
     width: 500px;
@@ -1131,7 +1121,7 @@
     border-radius: 20px;
   }
   footer {
-    width: 75%;
+    width: 90%;
     height: 200px;
     margin: 0 auto;
     display: flex;
@@ -1152,7 +1142,7 @@
     width: 20vw;
   }
   .fo_nav {
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -1160,8 +1150,8 @@
     flex-direction: row;
   }
   .menu12 {
-    width: 9vw;
-    height: 80px;
+    width: 13vw;
+    height: 60px;
     background-color: white;
     border-radius: 10px;
     position: relative;
@@ -1171,7 +1161,7 @@
     align-items: center;
     flex-direction: row;
     font-family: "ONE-Mobile-POP";
-    font-size: 20px;
+    font-size: 15px;
   }
   .menu12:hover .btn_inner::before {
     background-image: url(../img/btn4.gif);
@@ -1195,8 +1185,8 @@
   .menu12::after {
     position: absolute;
     content: "";
-    width: 8vw;
-    height: 60px;
+    width: 11vw;
+    height: 40px;
     border-radius: 10px;
     border: 3px solid #c33a4f;
     top: 50%;

@@ -1,8 +1,5 @@
 @charset "UTF-8";
 @import url(../css/font.css);
-@import url(../css/index2\ _tablet.css);
-@import url(../css/index2\ _mobile.css.css);
-@import url(../css/index2\ _mobile\ copy.css);
 $m: 0 auto;
 
 
@@ -20,7 +17,7 @@ $m: 0 auto;
     flex-direction: $row;
 }
 
-@media(min-width:1300px){
+@media(max-width:768px){
 *{margin:0; padding:0; scroll-behavior: smooth;}
 #wrap{width:100%; overflow: hidden;}
 h1{font-family:  'ONE-Mobile-POP';}
@@ -33,14 +30,14 @@ header{width:100vw; height:100vh;  margin:0 auto;
 display: flex; justify-content: flex-end;
     position:relative;}
 
-#header_box{width:50%; height:100%; background-color: gold;
+#header_box{width:70%; height:100%; background-color: gold;
 transform: skew(-20deg); position:absolute;right:0;
 animation:op 1.5s forwards; }
-#header_box2{width:95%; height: 100%; background-image: url(../img/mv-pc.png);
+#header_box2{width:100%; height: 100%; background-image: url(../img/mv-pc.png);
 background-size: cover; background-position: 50%; background-attachment: fixed;}
 #header_text{display: flex; flex-direction: column; 
 position:absolute; z-index: 5; top:20%; left:5%; }
-#header_text h1{display: inline-block; font-size: 5vw; margin:5% 0; color:#333;}
+#header_text h1{display: inline-block; font-size: 10vw; margin:5% 0; color:#333;}
 
 .bubble_box{width:70%; height:5%; position:absolute; bottom:-5%; left:15%;
 }
@@ -68,12 +65,12 @@ animation:text 0.5s ease forwards; animation-delay: 1.8s;}
 
 
 section{
-    width:100%;
+    width:244%;
     height:auto;
     margin:$m;
     position:relative;
    z-index: -1;
-   
+   left:-375px;
     video{
         width:100%;
         height:100%;
@@ -82,22 +79,22 @@ section{
 }
 
 .sec_box{
-    width:666px;
-    height:126px;
+    width:95vw;
+    height:100px;
     @include flex(flex, center,center,row);
     position:absolute;
     font-size: 30px;
     opacity: 0;
     &:first-of-type{
         top:9%;
-        left:10%;
+        left:33%;
        
      @include bg('../img/video1.png',cover,center);
     }
 
     &:nth-of-type(2){
-        top:29%;
-        right:5vw;
+        top:45%;
+        right:28%;
      @include bg('../img/video2.png',contain,center){
         background-repeat: no-repeat;
      }
@@ -107,8 +104,8 @@ section{
     }
 
     &:nth-of-type(3){
-        top:49%;
-        left:5%;
+        top:70%;
+        left:32%;
      @include bg('../img/video1.png',cover,center);
     }
 }
@@ -116,7 +113,7 @@ section{
 
 .mail{
     width:100%;
-    height:950px;
+    height:800px;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
     background-color: #c33a4f;
     mask-size: 100%;
@@ -124,7 +121,7 @@ section{
    position:relative;
    @include flex(flex,center,center,column);
    h1{
-    font-size: 50px;
+    font-size: 40px;
     color:white;
     transition:1s ease;
     opacity: 0;
@@ -138,11 +135,11 @@ section{
    
 }
 .bar{
-    width:550px;
+    width:90%;
     height:5px;
     background-color: white;
     position:absolute;
-    top:28%;
+    top:25%;
     transition:.3s ease;
     transform: scaleX(0);
     
@@ -271,7 +268,7 @@ section{
 
 
 .mail_img{
-    width:55vw;
+    width:90vw;
     height:600px;
     transition:1s ease;
     opacity: 0;
@@ -280,12 +277,12 @@ section{
     }
 }
 .mail_img2{
-    width:15vw;
+    width:35vw;
     height:300px;
     transition:1s ease;
     opacity: 0;
-    bottom:10%;
-    left:10%;
+    bottom:5%;
+    left:5%;
     position:absolute;
     @include bg('../img/mail2.png',contain,center){
         background-repeat: no-repeat;
@@ -293,12 +290,12 @@ section{
 }
 
 .mail_img3{
-    width:30vw;
+    width:40vw;
     height:925px;
     position:absolute;
     transition:1s ease;
     opacity: 0;
-    top:0;
+    top:-20%;
     right:0;
     @include bg('../img/mail1.png',contain,center){
         background-repeat: no-repeat;
@@ -318,19 +315,19 @@ section{
     p{
         margin-top:5%;
         color:rgb(190, 162, 0);
-        font-size: 25px;
+        font-size: 15px;
     }
     h1{
         color:#333;
         margin:1% 0;
-        font-size: 60px;
+        font-size: 40px;
         opacity: 0;
         transition: .3s ease;
     }
  
 }
 .sl_bar{
-    width:600px;
+    width:400px;
     height:4px;
     background-color: #333;
     margin-bottom:3%;
@@ -339,7 +336,7 @@ section{
 }
 
 .sl_video{
-    width:908px;
+    width:80%;
     height:400px;
     border-radius: 20px;
     position:relative;
@@ -355,7 +352,7 @@ section{
 }
 .item{
     position:absolute;
-    width:5vw;
+    width:2vw;
     height:100px;
     opacity: 0;
     transition:0.3s ease;
@@ -373,31 +370,31 @@ section{
         left:-19%;
     }
     &:nth-of-type(4){
-        width:668px;
+        width:70vw;
         height:auto;
-        right:-247px;
+        right:0px;
         z-index: 5;
-        top:155px;
+        top:350px;
         img{
             width:100%;
             height:100%;
         }
     }
     &:nth-of-type(5){
-        width:283px;
+        width:40vw;
         height:auto;
         right:-83px;
-        top:-137px;
+        top:-17px;
         img{
             width:100%;
             height:100%;
         }
     }
     &:nth-of-type(6){
-        width:284px;
+        width:40vw;
         height:auto;
         left:-10%;
-       bottom:-35%;
+       bottom:-25%;
         img{
             width:100%;
             height:100%;
@@ -405,10 +402,10 @@ section{
 
     }
     &:nth-of-type(7){
-        width:284px;
+        width:40vw;
         height:auto;
-        left:23%;
-       bottom:-57%;
+        left:53%;
+       bottom:-107%;
        transform: rotate(55deg);
         img{
             width:100%;
@@ -417,10 +414,10 @@ section{
         
     }
     &:nth-of-type(8){
-        width:284px;
+        width:60vw;
         height:auto;
         left:-52px;
-       top:-118px;
+       bottom:-520px;
        transform: rotate(91deg);
         img{
             width:100%;
@@ -439,7 +436,7 @@ article{
     height:900px;
     background-color: cadetblue;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
-    margin-top:-5%;
+    margin-top:-30%;
     mask-size: 100%;
     @include bg('../img/back.png',cover,center);
     @include flex(flex,center,center,row);
@@ -449,14 +446,14 @@ article{
     width:1200px;
     height:500px;
     
-    margin-left:40%;
+    margin-left:80%;
 
 }
 .sl{
     width:7807px;
     height:100%;
     @include flex(flex,space-around,center,row);
-
+    margin-left: 15%;
 }
 #prev,#next{
     width:150px;
@@ -468,11 +465,11 @@ article{
     cursor: pointer;
 }
 #prev{
-    left:-4%;
+    left:-15%;
     transition:.3s ease;
     font-size: 50px;
     &:hover{
-        left:-3%;
+        left:-13%;
         background-color: white;
     }
     img{
@@ -482,10 +479,10 @@ article{
     }
 }
 #next{
-    right:-4%;
+    right:-15%;
     transition:.3s ease;
     &:hover{
-        right:-3%;
+        right:-13%;
         background-color: white;
     }
     img{
@@ -494,8 +491,8 @@ article{
 }
 
 .po{
-    width:17vw;
-    height:auto;
+    width:35vw;
+    height:280px;
     background-color: gold;
     transform: skew(-7deg);
     @include flex(flex,center,center,column);
@@ -510,10 +507,10 @@ article{
 
     transform: skew(7deg);
     img{
-       width:169%;
+       width:40vw;
        margin: {
         top:-18%;
-        left:-39%;
+        left:-89%;
        }
     }
    
@@ -565,10 +562,10 @@ article{
 }
 
 .buy_box{
-    width:80%;
-    height:60%;
-    @include flex(flex,space-around,center,row);
-    margin-top:2%;
+    width:98%;
+    height:70%;
+    @include flex(flex,space-around,center,column);
+    margin-top:20%;
 
 
 }
@@ -630,8 +627,8 @@ article{
 
 
 .buy_box2{
-    width:40%;
-    height:428px;
+    width:95%;
+    height:292px;
     background-color: beige;
     border-radius:20px;
     position:relative;
@@ -692,12 +689,12 @@ img{
 }
 
 .title2{
-    width:15vw;
+    width:25vw;
     height:341px;
     
     position:absolute;
-    left:-25%;
-    bottom:-25%;
+    left:-0%;
+    bottom:-55%;
     @include bg('../img/bi.png',contain,center){
         background-repeat: no-repeat;
     };
@@ -727,11 +724,11 @@ img{
 
 
 .title3{
-    width:12vw;
+    width:20vw;
     height:278px;
     position:absolute;
-    right:-20%;
-    top:-20%;
+    right:-5%;
+    top:-40%;
     z-index: 999;
     @include bg('../img/nim.png',contain,center){
         background-repeat: no-repeat;
@@ -751,12 +748,12 @@ img{
 
 
 .title4{
-    width:14vw;
+    width:30vw;
     height:236px;
     
     position:absolute;
-    right:-10%;
-    bottom:-10%;
+    right:0%;
+    bottom:-30%;
     @include bg('../img/title2.png',contain,center){
         background-repeat: no-repeat;
     };
@@ -764,19 +761,19 @@ img{
 
 
 .title{
-    width:29vw;
+    width:90vw;
     height:84px;
     position:absolute;
     z-index: 9;
     left:5%;
-    top:-10%;
+    top:-15%;
     @include bg('../img/title.png',contain,center){
         background-repeat: no-repeat;
     };
     @include flex(flex, center,center, row);
     font: {
         family:'ONE-Mobile-POP';
-        size:2vw;
+        size:5vw;
  
     }
     color:white;
@@ -799,7 +796,7 @@ position:absolute;
 }
 
 .title1_1{
-    
+    width:30vw;
     top:8%;
     left:0%;
     @include bg('../img/dal.png',contain,center){
@@ -808,20 +805,23 @@ position:absolute;
 }
 
 .title1_2{
-    bottom:10%;
+    width:20vw;
+    bottom:-3%;
     left:5%;
     @include bg('../img/left.png',contain,center){
         background-repeat: no-repeat;
     };
 }
 .title1_3{
-    bottom:10%;
+    width:20vw;
+    bottom:-4%;
     right:5%;
     @include bg('../img/right.png',contain,center){
         background-repeat: no-repeat;
     };
 }
 .title1_4{
+    width:35vw;
     top:8%;
     right:0%;
     @include bg('../img/lu.png',contain,center){
@@ -831,8 +831,8 @@ position:absolute;
 
 
 .buy_box3{
-    width:1000px;
-    height:200px;
+    width:90%;
+    height:113px;
     z-index: 5;
     background-color: white;
     border-radius: 20px;
@@ -856,7 +856,7 @@ position:absolute;
     height:1395px;
     background-color: darkgoldenrod;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
-    margin-top:-5%;
+    margin-top:-13%;
     mask-size: 100%;
     position:relative;
     @include flex(flex,space-around,center,column);
@@ -866,24 +866,25 @@ position:absolute;
 
 
 .chip_box{
-    width:76%;
-    height:300px;
+    width:95%;
+    height:866px;
+    margin-top: 10%;
     background-color: rgba(255,255,255,0.15);
-    @include flex(flex,space-around,center,row);
+    @include flex(flex,space-around,center,column);
     border-radius: 20px;
     box-shadow: 0 0 0.25vw rgb(0 0 0 / 30%) inset;
 
 }
 .chip1{
-    width:10%;
-    height:250px;
- 
+    width:100%;
+    height:918px;
+    margin-top:15%;
     @include bg('../img/pack.png',contain,center){
         background-repeat: no-repeat;
     };
 }
 .chip2{
-    width:18%;
+    width:80%;
     height:150px;
     h1{
         font-size: 25px;
@@ -893,7 +894,7 @@ position:absolute;
     }
 }
 .chip3{
-    width:11%;
+    width:60%;
     height:100%;
 
     display: flex;
@@ -902,7 +903,7 @@ position:absolute;
   
 }
 .chip3_1{
-    width:65px;
+    width:80%;
     height:65px;
     transition:.3s ease;
     cursor: pointer;
@@ -922,14 +923,14 @@ position:absolute;
     }
 }
 .chip4{
-    width:30%;
+    width:80%;
     height:100%;
 
     border-radius: 20px;
     @include flex(flex,space-evenly,center,column);
 }
 .in{
-    width:370px;
+    width:95%;
     height:120px;
 border:1px solid white;
     border-radius: 10px;
@@ -983,7 +984,7 @@ border:1px solid white;
 }
 
 .in2{
-    width:370px;
+    width:100%;
     height:90px;
     background-color: white;
     border-radius: 10px;
@@ -999,7 +1000,7 @@ border:1px solid white;
  
 }
 .in2_text{
-    width:200px;
+    width:150px;
     height:40px;
     font-size: 12px;
     color:#333;
@@ -1010,18 +1011,11 @@ border:1px solid white;
     background-color:white;
     border-radius: 20px;
     font-size: 30px;
-    transition:.3s ease;
-    cursor: pointer;
-    box-shadow: 4px 4px 4px #666;
     @include flex(flex,center,center,row);
     font-family: 'GangwonEdu_OTFBoldA';
     img{
         width:23%;
         height:77%;
-    }
-    &:hover{
-        box-shadow: 0 0 0;
-        transform: translateY(4px);
     }
 }
 .hom2{
@@ -1067,7 +1061,7 @@ border:1px solid white;
 
 footer{
     width:75%;
-    height:200px;
+    height:500px;
     margin:$m;
 
     display: flex;
@@ -1280,5 +1274,4 @@ img:nth-of-type(3){
               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
   }
-
 }

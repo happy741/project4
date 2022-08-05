@@ -1,8 +1,5 @@
 @import url(../css/font.css);
-@import url(../css/index2\ _tablet.css);
-@import url(../css/index2\ _mobile.css.css);
-@import url(../css/index2\ _mobile\ copy.css);
-@media (min-width: 1300px) {
+@media (min-width: 480px) and (max-width: 768px) {
   * {
     margin: 0;
     padding: 0;
@@ -203,8 +200,8 @@
     background-position: center;
   }
   .sec_box:nth-of-type(2) {
-    top: 29%;
-    right: 5vw;
+    top: 45%;
+    right: -5%;
     background-image: url("../img/video2.png");
     background-size: contain;
     background-position: center;
@@ -214,7 +211,7 @@
     margin-top: -5%;
   }
   .sec_box:nth-of-type(3) {
-    top: 49%;
+    top: 70%;
     left: 5%;
     background-image: url("../img/video1.png");
     background-size: cover;
@@ -545,7 +542,7 @@
   .slide_box {
     width: 1200px;
     height: 500px;
-    margin-left: 40%;
+    margin-left: 80%;
   }
   .sl {
     width: 7807px;
@@ -1075,9 +1072,6 @@
     background-color: white;
     border-radius: 20px;
     font-size: 30px;
-    transition: 0.3s ease;
-    cursor: pointer;
-    box-shadow: 4px 4px 4px #666;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1087,10 +1081,6 @@
   .hom img {
     width: 23%;
     height: 77%;
-  }
-  .hom:hover {
-    box-shadow: 0 0 0;
-    transform: translateY(4px);
   }
   .hom2 {
     width: 500px;
