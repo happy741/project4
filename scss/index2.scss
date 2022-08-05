@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @import url(../css/font.css);
-@import url(../css/index2\ _tablet.css);
-@import url(../css/index2\ _mobile.css.css);
-@import url(../css/index2\ _mobile\ copy.css);
+@import "index2_mobile_copy", "index2_mobile", "index2_tablet";
+
 $m: 0 auto;
 
 
@@ -856,6 +855,7 @@ position:absolute;
     height:1395px;
     background-color: darkgoldenrod;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
+    mask: url(../img/bg_svg.svg) repeat-x 50% 0;
     margin-top:-5%;
     mask-size: 100%;
     position:relative;

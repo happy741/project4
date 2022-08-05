@@ -9,13 +9,16 @@
 
     <link rel="stylesheet" href="css/index2.css">
     <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/font.css">
+
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 
 </head>
 
 <body>
     <div id="wrap">
-        <header>
+        <header id="11">
             <div id="header_text">
                 <div class="text">
                     <h1>Pokémon</h1>
@@ -47,7 +50,7 @@
 
         </header>
 
-        <section>
+        <section id="22">
             <video autoplay loop muted>
                 <source src="video/video2.mp4" type="video/mp4">
             </video>
@@ -64,7 +67,7 @@
 
         </section>
 
-        <div class="mail">
+        <div class="mail" id="33">
  
                 <h1>스토리는 그대로, 아름답고</h1>
                 <h1>화려해진 세계를 즐겨보자!</h1>
@@ -77,7 +80,7 @@
         </div>
 
 
-        <div class="slide">
+        <div class="slide" id="66">
            
             <p>미니게임, 이로치 ,지형 변형, 최대 8마리의 동료</p>
             <h1>추가 된 다양한 기능</h1>
@@ -104,10 +107,13 @@
         </div>
 
         <article>
-            <div class="slide_box">
+            <div class="slide_box"  id="44">
                 <div class="sl">
-                    <div id="prev"></div>
+                    <div id="prev">
+                        <img src="img/prev.png" alt="">
+                    </div>
                     <div class="po click">
+                        <div class="po_inner"></div>
                         <div class="po_img"><img src="img/p_pic_l_1.png" alt="#"></div>
                         <div class="po_box">
                             <p>피카츄</p>
@@ -173,12 +179,14 @@
                         <div class="po_img"><img src="img/p_pic_l_14.png" alt="#"></div>
                         <div class="po_box"></div>
                     </div>
-                    <div id="next"></div>
+                    <div id="next">
+                        <img src="img/next.png" alt="#">
+                    </div>
                 </div>
             </div>
         </article>
 
-        <div class="buy">
+        <div class="buy" id="55">
             <div class="buy_box">
                 <div class="buy_box2">
                     <div class="buy_box2_1">
@@ -270,11 +278,46 @@
                    <a href="#"><img src="img/logo.png" alt="#"></a> 
                 </div>
                 <div class="fo_nav">
-                    <div class="menu12"><a href="#">TOP</a> </div>
-                    <div class="menu12"><a href="#">모험의 무대</a></div>
-                    <div class="menu12"><a href="#">다양한 기능</a></div>
-                    <div class="menu12"><a href="#">주인공 소개</a></div>
-                    <div class="menu12"><a href="#">캠프 확장</a></div>
+                    <div class="menu12">
+                        <a href="#22">TOP</a>
+                        <div class="inner_2">
+                            <img src="img/pi.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                        </div>
+                        <div class="btn_inner"></div>
+                    </div>
+                    <div class="menu12"><a href="#33">모험의 무대</a>
+                        <div class="inner_2">
+                            <img src="img/gubok.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                        </div>
+                        <div class="btn_inner"></div></div>
+
+                    <div class="menu12"><a href="#66">다양한 기능</a>
+                        <div class="inner_2">
+                            <img src="img/happy.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                        </div>
+                        <div class="btn_inner"></div></div>
+
+                    <div class="menu12"><a href="#44">주인공 소개</a>
+                        <div class="inner_2">
+                            <img src="img/mail2.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                        </div>
+                        <div class="btn_inner"></div></div>
+
+                    <div class="menu12"><a href="#55">캠프 확장</a>
+                        <div class="inner_2">
+                            <img src="img/mail1.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                            <img src="img/monster.png" alt="#">
+                        </div>
+                        <div class="btn_inner"></div></div>
                 </div>
             </footer>
     
@@ -286,38 +329,38 @@
 
     </div>
 <script>
-    $(function(){
-        var page1 =0;
-    var sd = $('.po').outerWidth(true);
-    var hidden=$('.po').index();
+    // $(function(){
+    //     var page1 =0;
+    // var sd = $('.po').outerWidth(true);
+    // var hidden=$('.po').index();
 
-    $('#prev').click(function () {
-        page1--;
+    // $('#prev').click(function () {
+    //     page1--;
         
 
-        if (page1 < 0) {
-            page1 = 0;
-        }
-        $('.po').removeClass('click');
-        $('.po').eq(page1).addClass('click');
+    //     if (page1 < 0) {
+    //         page1 = 0;
+    //     }
+    //     $('.po').removeClass('click');
+    //     $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd * page1*1.52}, 500);
+    //     $('.sl').stop().animate({ marginLeft: -sd * page1*1.5}, 500);
 
-    });
+    // });
 
-    $('#next').click(function () {
-        page1++;
+    // $('#next').click(function () {
+    //     page1++;
 
-        if (page1 > $('.po').length - 1) {
-            page1 = $('.po').length - 1;
-        }
-        $('.po').removeClass('click');
-        $('.po').eq(page1).addClass('click');
+    //     if (page1 > $('.po').length - 1) {
+    //         page1 = $('.po').length - 1;
+    //     }
+    //     $('.po').removeClass('click');
+    //     $('.po').eq(page1).addClass('click');
       
-        $('.sl').stop().animate({ marginLeft: -sd * page1*1.52}, 500);
-    });
+    //     $('.sl').stop().animate({ marginLeft: -sd * page1*1.5}, 500);
+    // });
 
-    });
+    // });
  
     $(window).scroll(function(){
         var ws=$(this).scrollTop();
@@ -339,22 +382,146 @@
             $('.mail').children().css('opacity','1');
         }
 
-        var and=$('.android_box').offset().top;
-        if(ws>and-850){
-            $('.android_box').css('transform','scaleY(1)');
+        var slide=$('.slide').offset().top;
+        if(ws>slide-400){
+            $('.sl_bar').css('transform','scaleX(1)');
+            $('.item').css('opacity','1');
+            $('.sl_video').css('opacity','1');
+            $('.slide >h1').css('opacity','1');
+
+        }
+        var buy=$('.buy').offset().top;
+        if(ws>buy-400){
+            $('.buy_box2').css({transform:'translateY(0px)',
+        opacity:'1'});
+   
+
         }
 
-        var art_img=$('.art_img').offset().top;
-        if(ws>art_img-600){
-            $('.art_img1').css('transform','scaleY(1)');
-            $('.art_img2').css('transform','scaleY(1)');
-            $('.art_img3').css('transform','scaleY(1)');
-        }
+        $(function () {
 
-        var stay=$('.news').offset().top;
-        if(ws>stay+100){
-            $('.stay').css('transform','scaleY(1)');
+
+var mql = window.matchMedia("screen and (max-width:1300px)");
+var mq2 = window.matchMedia("screen and (max-width:768px)");
+var mq3 = window.matchMedia("screen and (max-width:500px)");
+var page1=0;
+var sd = $('.po').outerWidth(true);
+if (mql.matches) {
+    $('#prev').click(function () {
+        page1--;
+        
+
+        if (page1 < 0) {
+            page1 = 0;
         }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.15}, 500);
+
+    });
+
+    $('#next').click(function () {
+        page1++;
+
+        if (page1 > $('.po').length - 1) {
+            page1 = $('.po').length - 1;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+      
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.15}, 500);
+    });
+
+
+}else if(mq2.matches) {
+    $('#prev').click(function () {
+        page1--;
+        
+
+        if (page1 < 0) {
+            page1 = 0;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+
+        $('.sl').stop().animate({ marginLeft: -sd * page1*100}, 500);
+
+    });
+
+    $('#next').click(function () {
+        page1++;
+
+        if (page1 > $('.po').length - 1) {
+            page1 = $('.po').length - 1;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+      
+        $('.sl').stop().animate({ marginLeft: -sd * page1*100}, 500);
+    });}else if(mq3.matches) {
+    $('#prev').click(function () {
+        page1--;
+        
+
+        if (page1 < 0) {
+            page1 = 0;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+
+        $('.sl').stop().animate({ marginLeft: -sd * page1*20}, 500);
+
+    });
+
+    $('#next').click(function () {
+        page1++;
+
+        if (page1 > $('.po').length - 1) {
+            page1 = $('.po').length - 1;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+      
+        $('.sl').stop().animate({ marginLeft: -sd * page1*20}, 500);
+    });}
+     else {
+
+ 
+    $('#prev').click(function () {
+        page1--;
+        
+
+        if (page1 < 0) {
+            page1 = 0;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+
+        $('.sl').stop().animate({ marginLeft: -sd * page1*1.5}, 500);
+
+    });
+
+    $('#next').click(function () {
+        page1++;
+
+        if (page1 > $('.po').length - 1) {
+            page1 = $('.po').length - 1;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+      
+        $('.sl').stop().animate({ marginLeft: -sd * page1*1.5}, 500);
+    });
+
+}
+
+
+
+
+
+});
+     
 
 });
 
