@@ -370,11 +370,11 @@ section{
         left:-19%;
     }
     &:nth-of-type(4){
-        width:70vw;
+        width:90vw;
         height:auto;
-        right:0px;
+        right:-100px;
         z-index: 5;
-        top:350px;
+        top:250px;
         img{
             width:100%;
             height:100%;
@@ -391,10 +391,10 @@ section{
         }
     }
     &:nth-of-type(6){
-        width:40vw;
+        width:35vw;
         height:auto;
         left:-10%;
-       bottom:-25%;
+       bottom:-15%;
         img{
             width:100%;
             height:100%;
@@ -402,9 +402,9 @@ section{
 
     }
     &:nth-of-type(7){
-        width:40vw;
+        width:60vw;
         height:auto;
-        left:53%;
+        left:3%;
        bottom:-107%;
        transform: rotate(55deg);
         img{
@@ -414,15 +414,12 @@ section{
         
     }
     &:nth-of-type(8){
-        width:60vw;
+        width:1vw;
         height:auto;
         left:-52px;
        bottom:-520px;
        transform: rotate(91deg);
-        img{
-            width:100%;
-            height:100%;
-        }
+        display: none;
         
     }
 }
@@ -853,7 +850,7 @@ position:absolute;
 }
 .chip{
     width:100%;
-    height:1395px;
+    height:1050px;
     background-color: darkgoldenrod;
     -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
     margin-top:-13%;
@@ -867,7 +864,7 @@ position:absolute;
 
 .chip_box{
     width:95%;
-    height:866px;
+    height:785px;
     margin-top: 10%;
     background-color: rgba(255,255,255,0.15);
     @include flex(flex,space-around,center,column);
@@ -1006,7 +1003,7 @@ border:1px solid white;
     color:#333;
 }
 .hom{
-    width:499px;
+    width:90%;
     height:100px;
     background-color:white;
     border-radius: 20px;
@@ -1019,7 +1016,7 @@ border:1px solid white;
     }
 }
 .hom2{
-    width:500px;
+    width:90%;
     height:200px;
     transition:.3s ease;
     cursor: pointer;
@@ -1060,8 +1057,8 @@ border:1px solid white;
 
 
 footer{
-    width:75%;
-    height:500px;
+    width:100%;
+    height:60px;
     margin:$m;
 
     display: flex;

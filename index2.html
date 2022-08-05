@@ -403,7 +403,7 @@
 
 var mql = window.matchMedia("screen and (max-width:1300px)");
 var mq2 = window.matchMedia("screen and (max-width:768px)");
-var mq3 = window.matchMedia("screen and (max-width:500px)");
+var mq3 = window.matchMedia("screen and (max-width:501px)");
 var page1=0;
 var sd = $('.po').outerWidth(true);
 if (mql.matches) {
@@ -445,7 +445,7 @@ if (mql.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd * page1*100}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*4}, 500);
 
     });
 
@@ -458,7 +458,7 @@ if (mql.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
       
-        $('.sl').stop().animate({ marginLeft: -sd * page1*100}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*4}, 500);
     });}else if(mq3.matches) {
     $('#prev').click(function () {
         page1--;
