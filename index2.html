@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokémon Mystery Dungeon: Rescue Team DX</title>
 
     <link rel="stylesheet" href="css/index2.css">
     <link rel="stylesheet" href="css/font.css">
@@ -402,11 +402,12 @@
 
 
 var mql = window.matchMedia("screen and (max-width:1300px)");
-var mq2 = window.matchMedia("screen and (max-width:768px)");
-var mq3 = window.matchMedia("screen and (max-width:501px)");
+var mq2 = window.matchMedia("screen and (min-width:768px)and (max-width:1299px)");
+var mq3 = window.matchMedia("screen and (min-width:500px) and (max-width:767px)");
 var page1=0;
 var sd = $('.po').outerWidth(true);
-if (mql.matches) {
+if(mq2.matches) {
+    
     $('#prev').click(function () {
         page1--;
         
@@ -417,7 +418,7 @@ if (mql.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd * page1*2.15}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.1}, 500);
 
     });
 
@@ -430,36 +431,9 @@ if (mql.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
       
-        $('.sl').stop().animate({ marginLeft: -sd * page1*2.15}, 500);
-    });
-
-
-}else if(mq2.matches) {
-    $('#prev').click(function () {
-        page1--;
-        
-
-        if (page1 < 0) {
-            page1 = 0;
-        }
-        $('.po').removeClass('click');
-        $('.po').eq(page1).addClass('click');
-
-        $('.sl').stop().animate({ marginLeft: -sd * page1*4}, 500);
-
-    });
-
-    $('#next').click(function () {
-        page1++;
-
-        if (page1 > $('.po').length - 1) {
-            page1 = $('.po').length - 1;
-        }
-        $('.po').removeClass('click');
-        $('.po').eq(page1).addClass('click');
-      
-        $('.sl').stop().animate({ marginLeft: -sd * page1*4}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.1}, 500);
     });}else if(mq3.matches) {
+        var sd1 = $('.po').outerWidth(true);
     $('#prev').click(function () {
         page1--;
         
@@ -470,7 +444,7 @@ if (mql.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd * page1*20}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd1*page1*2.2}, 500);
 
     });
 
@@ -483,8 +457,36 @@ if (mql.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
       
-        $('.sl').stop().animate({ marginLeft: -sd * page1*20}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd1*page1}, 500);
     });}
+    else if (mql.matches) {
+        
+    $('#prev').click(function () {
+        page1--;
+        
+
+        if (page1 < 0) {
+            page1 = 0;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.27}, 500);
+
+    });
+
+    $('#next').click(function () {
+        page1++;
+
+        if (page1 > $('.po').length - 1) {
+            page1 = $('.po').length - 1;
+        }
+        $('.po').removeClass('click');
+        $('.po').eq(page1).addClass('click');
+      
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.27}, 500);
+    });}
+
      else {
 
  
