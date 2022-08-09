@@ -401,8 +401,8 @@
         $(function () {
 
 
-var mql = window.matchMedia("screen and (max-width:1300px)");
-var mq2 = window.matchMedia("screen and (min-width:768px)and (max-width:1299px)");
+var mql = window.matchMedia("screen and (max-width:1100px)");
+var mq2 = window.matchMedia("screen and (min-width:768px)and (max-width:1099px)");
 var mq3 = window.matchMedia("screen and (min-width:500px) and (max-width:767px)");
 var page1=0;
 var sd = $('.po').outerWidth(true);
@@ -418,20 +418,20 @@ if(mq2.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd * page1*2.1}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.4}, 500);
 
     });
 
     $('#next').click(function () {
         page1++;
 
-        if (page1 > $('.po').length - 1) {
-            page1 = $('.po').length - 1;
+        if (page1 > $('.po').length +1) {
+            page1 = $('.po').length +1;
         }
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
       
-        $('.sl').stop().animate({ marginLeft: -sd * page1*2.1}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*2.4}, 500);
     });}else if(mq3.matches) {
         var sd1 = $('.po').outerWidth(true);
     $('#prev').click(function () {
@@ -444,7 +444,7 @@ if(mq2.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd1*page1*2.2}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd1*page1}, 500);
 
     });
 
@@ -471,7 +471,7 @@ if(mq2.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
 
-        $('.sl').stop().animate({ marginLeft: -sd * page1*2.27}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*6}, 500);
 
     });
 
@@ -484,7 +484,7 @@ if(mq2.matches) {
         $('.po').removeClass('click');
         $('.po').eq(page1).addClass('click');
       
-        $('.sl').stop().animate({ marginLeft: -sd * page1*2.27}, 500);
+        $('.sl').stop().animate({ marginLeft: -sd * page1*6}, 500);
     });}
 
      else {

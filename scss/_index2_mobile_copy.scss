@@ -15,6 +15,7 @@ $m: 0 auto;
     justify-content: $js;
     align-items: $ali;
     flex-direction: $row;
+    @content
 }
 
 @media(max-width:768px){
@@ -850,10 +851,10 @@ position:absolute;
 }
 .chip{
     width:100%;
-    height:1050px;
+    height:2211px;
     background-color: darkgoldenrod;
-    -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
-    margin-top:-13%;
+    -webkit-mask: url(../img/bg2_svg.svg);
+    margin-top:-16%;
     mask-size: 100%;
     position:relative;
     @include flex(flex,space-around,center,column);
@@ -1041,11 +1042,12 @@ border:1px solid white;
     width:100%;
     height:100%;
   background-image: url(../img/fall2.png);
+ 
 }
 .hom2_2{
     width:100%;
     height:150px;
- -webkit-mask: url(../img/bg_svg.svg) repeat-x 50% 0;
+ -webkit-mask: url(../img/bg2_svg.svg) repeat-x 50% 0;
  mask-size: 100%;
 @include bg('../img/direct.png',cover,center);
  background-color: gold;
@@ -1058,20 +1060,20 @@ border:1px solid white;
 
 footer{
     width:100%;
-    height:60px;
+    height:649px;
     margin:$m;
 
-    display: flex;
+    @include flex(flex,center,center,column);
 }
 .fo_logo{
-    width:25%;
+    width:100%;
     height:100%;
     transition:.3s ease;
     &:hover{
         transform: scale(1.1);
     }
 img{
-    width:20vw;
+    width:70vw;
 }
     @include flex(flex,center,center,row);
 }
@@ -1079,11 +1081,13 @@ img{
     width:80%;
     height:100%;
 
-    @include flex(flex,space-around,center,row);
+    @include flex(flex,space-around,center,row){
+        flex-wrap: wrap
+    };
 
 }
 .menu12{
-    width:9vw;
+    width:37vw;
     height:80px;
     background-color: white;
     border-radius: 10px;
@@ -1095,9 +1099,11 @@ img{
 
     &:hover .btn_inner::before{
         background-image: url(../img/btn4.gif);
+        background-size: 15%,50%;
     }
     &:hover .btn_inner::after{
         background-image: url(../img/btn3.gif);
+        background-size: 15%,50%;
     }
     &:hover{
         background-color: #c33a4f;
@@ -1116,7 +1122,7 @@ img{
 .menu12::after{
 position:absolute;
 content:'';
-width:8vw;
+width:33vw;
 height:60px;
 border-radius: 10px;
 border:3px solid #c33a4f;
@@ -1127,52 +1133,55 @@ cursor: pointer;
 }
 .btn_inner::before{
 content:'';
-width:3vw;
-height:3vw;
+width:10vw;
+height:10vw;
 background-color: white;
 position:absolute;
 clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0% 100%);
 bottom:0;
 right:0;
 background-image: url(../img/btn1.png);
+background-size: 15%,50%;
 background-size: 0.5vw 0.5vw;
 border-radius: 7px;
 
 }
 .btn_inner::after{
     content:'';
-    width:3vw;
-    height:3vw;
+    width:10vw;
+    height:10vw;
     background-color: white;
     position:absolute;
     clip-path: polygon(0 0, 100% 0%, 100% 0, 0% 100%);
     top:0;
     left:0;
     background-image: url(../img/btn2.png);
+    background-size: 15%,50%;
     background-size: 0.5vw 0.5vw;
     border-radius: 7px;
     
     }
 
 .inner_2{
+z-index: 999;
 position:absolute;
-top:-7vw;
-left:30%;
+top:2vw;
+left:80%;
 transition:.3s ease;
 transform: translateY(20px);
 opacity: 0;
 img:first-of-type{
-    width:6vw;
+    width:15vw;
 }
 img:nth-of-type(2){
- width:2vw;
+ width:6vw;
  position:absolute;
- left:5vw;
+ left:9vw;
  transform: rotate(40deg); 
 }
 
 img:nth-of-type(3){
-    width:1.5vw;
+    width:4vw;
     position:absolute;
     top:2vw;
     transform: rotate(20deg);
